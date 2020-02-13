@@ -851,10 +851,10 @@ AnimatorStateMachine:
     m_Position: {x: -360, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102473065155677280}
-    m_Position: {x: -70, y: 280, z: 0}
+    m_Position: {x: -110, y: 270, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102301292343519668}
-    m_Position: {x: 180, y: 240, z: 0}
+    m_Position: {x: 100, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102518237885742260}
     m_Position: {x: -1000, y: 220, z: 0}
