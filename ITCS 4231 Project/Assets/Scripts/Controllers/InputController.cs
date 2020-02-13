@@ -11,6 +11,7 @@ namespace SA
 
         StateController states;
         CameraController camController;
+        
         float delta;
 
 
@@ -24,7 +25,7 @@ namespace SA
         }
 
         // Update is called once per frame
-        void FixedUpdate()
+       /* void FixedUpdate()
         {
             delta = Time.fixedDeltaTime;
             GetInput();
@@ -33,16 +34,22 @@ namespace SA
 
             //Timestamp 39:20
 
-        }
+        }*/
 
          void Update()
          {
             delta = Time.deltaTime;
-            camController.Tick(delta);  
-         }
+            camController.Tick(delta);
+            GetInput();
+            UpdateStates();
+            states.FixedTick(delta);
+        }
 
         void GetInput()
         {
+
+         
+
             vertical = Input.GetAxis("Vertical");
             horizontal = Input.GetAxis("Horizontal");
         }
@@ -56,7 +63,8 @@ namespace SA
 
             Vector3 v =  vertical * camController.transform.forward;
             Vector3 h = horizontal * camController.transform.right;
-            states.moveDir = (v + h).normalized;
+            states.moveDir = (v + h);
+            states.moveDir.Normalize();
             float m = Mathf.Abs(horizontal) + Mathf.Abs(vertical);
             states.moveAmount = Mathf.Clamp01(m);
 
