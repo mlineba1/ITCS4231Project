@@ -532,6 +532,8 @@ MonoBehaviour:
   followSpeed: 9
   mouseSpeed: 2
   target: {fileID: 0}
+  pivot: {fileID: 0}
+  camTrans: {fileID: 0}
   turnSmoothing: 0.1
   minAngle: -35
   maxAngle: 35
@@ -548,8 +550,8 @@ GameObject:
   - component: {fileID: 1824927424}
   - component: {fileID: 1824927423}
   - component: {fileID: 1824927422}
-  - component: {fileID: 1824927421}
   - component: {fileID: 1824927425}
+  - component: {fileID: 1824927421}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -566,9 +568,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1824927420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 030b998c0c0026347ae6d0f69fbc4ef1, type: 3}
+  m_Script: {fileID: 11500000, guid: b1e214f2d127a9b4aae0fb6bd4a08002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontal: 0
+  vertical: 0
+  moveAmount: 0
+  activeModel: {fileID: 0}
+  anim: {fileID: 0}
+  rigid: {fileID: 0}
+  moveDir: {x: 0, y: 0, z: 0}
+  delta: 0
 --- !u!54 &1824927422
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -623,13 +633,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1824927420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1e214f2d127a9b4aae0fb6bd4a08002, type: 3}
+  m_Script: {fileID: 11500000, guid: 030b998c0c0026347ae6d0f69fbc4ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: 0
-  vertical: 0
-  activeModel: {fileID: 0}
-  anim: {fileID: 0}
-  rigid: {fileID: 0}
-  moveDir: {x: 0, y: 0, z: 0}
-  delta: 0
