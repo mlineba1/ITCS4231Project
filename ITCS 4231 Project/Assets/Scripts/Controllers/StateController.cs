@@ -9,6 +9,7 @@ namespace SA
         public float horizontal;
         public float vertical;
         public float moveAmount;
+        private float moveSpeed;
 
         public GameObject activeModel;
         public Animator anim;
@@ -21,7 +22,48 @@ namespace SA
         {
             SetupAnimator();
             rigid = GetComponent<Rigidbody>();
-            
+            moveSpeed = 10f;
+        }
+
+        public void Move()
+        {
+            Vector3 inputVector = Vector3.zero;
+
+            // Check for movement input
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                inputVector += Vector3.forward;
+            }
+            else if (Input.GetKey(KeyCode.DownArrow))
+            {
+                inputVector += Vector3.back;
+            }
+
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                inputVector += Vector3.left;
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                inputVector += Vector3.right;
+            }
+
+            if (inputVector != Vector3.zero)
+            {
+
+                // Normalize input vector to standardize movement speed
+                inputVector.Normalize();
+                inputVector *= moveSpeed;
+                rigid.velocity = inputVector;
+                // Face player along movement vector
+               
+
+
+            }
+            else
+            {
+                rigid.velocity = Vector3.zero;
+            }
         }
 
         void SetupAnimator()

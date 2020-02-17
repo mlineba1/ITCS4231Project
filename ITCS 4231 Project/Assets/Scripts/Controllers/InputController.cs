@@ -8,10 +8,12 @@ namespace SA
     {
         float horizontal;
         float vertical;
-
+        public float moveSpeed;
         StateController states;
         CameraController camController;
-        
+       
+
+
         float delta;
 
 
@@ -20,37 +22,42 @@ namespace SA
             states = GetComponent<StateController>();
             states.Init();
 
+            moveSpeed = 10f;
+
             camController = CameraController.singleton;
             camController.Init(this.transform);
         }
 
         // Update is called once per frame
-       /* void FixedUpdate()
+        void FixedUpdate()
         {
             delta = Time.fixedDeltaTime;
+            camController.Tick(delta);
             GetInput();
             UpdateStates();
             states.FixedTick(delta);
 
             //Timestamp 39:20
 
-        }*/
+        }
 
-         void Update()
+        /* void Update()
          {
             delta = Time.deltaTime;
             camController.Tick(delta);
+            
             GetInput();
             UpdateStates();
             states.FixedTick(delta);
-        }
+        }*/
 
         void GetInput()
         {
 
-         
 
-            vertical = Input.GetAxis("Vertical");
+           // states.Move();
+            
+             vertical = Input.GetAxis("Vertical");
             horizontal = Input.GetAxis("Horizontal");
         }
 
@@ -63,10 +70,14 @@ namespace SA
 
             Vector3 v =  vertical * camController.transform.forward;
             Vector3 h = horizontal * camController.transform.right;
-            states.moveDir = (v + h);
-            states.moveDir.Normalize();
+           
+            states.moveDir = (v + h).normalized;
+            states.moveDir *= moveSpeed;
             float m = Mathf.Abs(horizontal) + Mathf.Abs(vertical);
-            states.moveAmount = Mathf.Clamp01(m);
+            states.moveAmount = Mathf.Clamp(m,0,5);
+            
+           
+            
 
 
             
