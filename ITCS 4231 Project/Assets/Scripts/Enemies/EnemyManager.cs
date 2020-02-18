@@ -6,17 +6,18 @@ public class EnemyManager : MonoBehaviour
 {
 	[SerializeField] private Animator animator;
 	[SerializeField] private Transform trans;
+	[SerializeField] private float attackRange;
+	[SerializeField] private float aggroRadius;
 	private int maxHealth;
 	private int currentHealth;
 	private bool isAggro;
-	private float aggroRadius;
-	private float attackRange;
 	private Vector3 spawnPoint;
+	private int attackType;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        spawnPoint = transform.position;
     }
 
     // Update is called once per frame
