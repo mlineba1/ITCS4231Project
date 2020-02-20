@@ -8,6 +8,7 @@ public class EnemyManager : MonoBehaviour
 	[SerializeField] private Transform trans;
 	[SerializeField] private float attackRange;
 	[SerializeField] private float aggroRadius;
+    [SerializeField] private Transform characterTrans;
 	private int maxHealth;
 	private int currentHealth;
 	private bool isAggro;
@@ -36,7 +37,7 @@ public class EnemyManager : MonoBehaviour
 			yield return new WaitForSeconds(1f);
 
 			// Check distance to aggro (!!!)
-			//float d = Vector3.Distance (trans.position, character.trans.position); (Need ref to character !!!)
+			float d = Vector3.Distance (trans.position, characterTrans.position); 
 
 			if (d < aggroRadius) {
 				isAggro = true;
@@ -47,8 +48,8 @@ public class EnemyManager : MonoBehaviour
 
 	//following player
 	private void followPlayer(){
-		Vector3 towardsPlayer = character.trans.position - trans.position;
-		Vector3 towardsSpawnPoint = trans.position - originalSpawnPoint;
+		Vector3 towardsPlayer =characterTrans.position - trans.position;
+		Vector3 towardsSpawnPoint = trans.position - spawnPoint;
 
 		// Are we close enough to attack -> Attack state
 		if (isAggro==true && towardsPlayer.magnitude < attackRange) {
@@ -60,7 +61,7 @@ public class EnemyManager : MonoBehaviour
 			//set animator moving (!!!)
 
 			towardsPlayer.Normalize ();
-			towardsPlayer *= moveSpeed * Time.deltaTime;
+			//towardsPlayer *= moveSpeed * Time.deltaTime;
 
 			trans.position += towardsPlayer;
 		}
