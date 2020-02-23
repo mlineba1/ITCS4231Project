@@ -85,9 +85,16 @@ public class EnemyManager : MonoBehaviour
 	}
 
 	void OnCollisionEnter(Collision col){
-		if (collision.gameObject.tag == "Player"){
+		if (col.gameObject.tag == "Player"){
 			//set animator trigger for getting hit
-			animator.SetTrigger ("enemyHit");
+			enemyAnim.SetTrigger ("enemyHit");
+			//create script for causing damage to enemy (!!!)
 		}
+	}
+
+	//Work on a health system for enemy (!!!)
+	void enemyKilled(){
+		isDead = true;
+		enemyAnim.SetBool("enemyDead", true);
 	}
 }

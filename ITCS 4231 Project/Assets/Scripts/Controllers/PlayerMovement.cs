@@ -7,7 +7,8 @@ namespace SA
     public class PlayerMovement : MonoBehaviour
     {
 
-        [SerializeField] private Transform trans;
+        [SerializeField] private Animator anim;
+		[SerializeField] private Transform trans;
         [SerializeField] private Rigidbody rb;
         CameraController camController;
 
@@ -58,6 +59,13 @@ namespace SA
                 // Face player along movement vector
                 Quaternion targetRotation = Quaternion.LookRotation(inputVector);
                 trans.rotation = Quaternion.Lerp(trans.rotation, targetRotation, turnSpeed * Time.deltaTime);
+
+				//set animator for walking
+				anim.SetBool("isWalking", true);
+
+				//create script for running (!!!)
+				//set animator for running
+				//anim.SetBool("isRunning", true);
             }
             else
             {
