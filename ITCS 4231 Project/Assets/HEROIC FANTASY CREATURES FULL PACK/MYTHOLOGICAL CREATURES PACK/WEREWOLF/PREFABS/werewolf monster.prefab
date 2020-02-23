@@ -1451,8 +1451,8 @@ GameObject:
   - component: {fileID: 408568}
   - component: {fileID: 9553852}
   m_Layer: 0
-  m_Name: WEREWOLF_PBR
-  m_TagString: Untagged
+  m_Name: werewolf monster
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
