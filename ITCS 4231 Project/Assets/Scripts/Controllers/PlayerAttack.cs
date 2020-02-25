@@ -18,12 +18,12 @@ public class PlayerAttack : MonoBehaviour
         //Script different player attacks (!!!)
 
 		//set animator for attack 1
-		
+		//anim.SetTrigger ("attack1");
 
 		//set animator for attack 2
-
+		//anim.SetTrigger ("attack1");
 
 		//set animator for attack 3
-
+		//anim.SetTrigger ("attack1");
     }
 }
