@@ -10,7 +10,7 @@ namespace SA
 
         public bool lockon;
         public float followSpeed = 9;
-        public float mouseSpeed = 2;
+        public float mouseSpeed = 6;
 
         public Transform target;
         public Transform pivot;

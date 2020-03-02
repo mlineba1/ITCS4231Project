@@ -6,65 +6,43 @@ namespace SA
 {
     public class StateController : MonoBehaviour
     {
+        
         public float horizontal;
         public float vertical;
         public float moveAmount;
-        private float moveSpeed;
+        public Vector3 moveDir;
+
+        [SerializeField]private float moveSpeed = 10f;
+        public float runSpeed = 15f;
+        public float rotateSpeed = 20;
+        public float toGround = 0.5f;
+
+        public bool run;
+        
+
 
         public GameObject activeModel;
         public Animator anim;
         public Rigidbody rigid;
-        public Vector3 moveDir;
+        
 
         public float delta;
+        public LayerMask ignoreLayers;
 
         public void Init()
         {
             SetupAnimator();
             rigid = GetComponent<Rigidbody>();
-            moveSpeed = 10f;
+            rigid.angularDrag = 999;
+            rigid.drag = 4;
+            rigid.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            gameObject.layer = 8;
+            ignoreLayers = ~(1 << 9);
         }
 
-        public void Move()
-        {
-            Vector3 inputVector = Vector3.zero;
-
-            // Check for movement input
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                inputVector += Vector3.forward;
-            }
-            else if (Input.GetKey(KeyCode.DownArrow))
-            {
-                inputVector += Vector3.back;
-            }
-
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                inputVector += Vector3.left;
-            }
-            else if (Input.GetKey(KeyCode.RightArrow))
-            {
-                inputVector += Vector3.right;
-            }
-
-            if (inputVector != Vector3.zero)
-            {
-
-                // Normalize input vector to standardize movement speed
-                inputVector.Normalize();
-                inputVector *= moveSpeed;
-                rigid.velocity = inputVector;
-                // Face player along movement vector
-               
+        
 
 
-            }
-            else
-            {
-                rigid.velocity = Vector3.zero;
-            }
-        }
 
         void SetupAnimator()
         {
@@ -92,9 +70,60 @@ namespace SA
         {
             delta = d;
 
-            rigid.velocity = moveDir;
+            if (moveAmount > 0)
+            {
+                rigid.drag = 0;
+            } else
+            {
+                rigid.drag = 4;
+            }
+
+            float targetSpeed = moveSpeed;
+            if (run)
+                targetSpeed = runSpeed;
+
+
+            rigid.velocity = moveDir*(targetSpeed*moveAmount);
+
+            Vector3 targetDir = moveDir;
+            targetDir.y = 0;
+            if (targetDir == Vector3.zero)
+                targetDir = transform.forward;
+            Quaternion tr = Quaternion.LookRotation(targetDir);
+            Quaternion targetRotation = Quaternion.Slerp(transform.rotation, tr, delta * moveAmount * rotateSpeed);
+            transform.rotation = targetRotation;
+            HandleMovementAnimations();
         }
         
+        void HandleMovementAnimations()
+        {
+            //anim.SetFloat("vertical", moveAmount, 0.4f, delta);
+            //TODO Make animations work
+
+
+        }
+
+
+        //*****Unfinished***** 
+        public bool onGround()
+        {
+            bool r = false;
+
+            Vector3 origin = transform.position + Vector3.up * toGround;
+            Vector3 dir = -Vector3.up;
+            float dis = toGround - 0.3f;
+            RaycastHit hit;
+            if (Physics.Raycast(origin, dir, out hit, dis, ignoreLayers)){
+                r = true;
+                Vector3 targetPosition = hit.point;
+                transform.position = targetPosition;
+            }
+
+            return r;
+           
+
+
+        }
 
     }
 }
