@@ -10,24 +10,29 @@ public class EnemyManager : MonoBehaviour
 	[SerializeField] private float aggroRadius;
     [SerializeField] private Transform playerTrans;
 	[SerializeField] private float moveSpeed;
-	private int maxHealth;
-	private int currentHealth;
+	public int maxHealth;
+	public int currentHealth;
 	private bool isAggro;
 	private bool isMoving;
 	private bool isAttacking;
 	private Vector3 spawnPoint;
 	private int attackType;
 	private bool isDead;
+	private PlayerAttack pAttack;
+	private int playerDamage;
 
 	//private static CharacterManager character; (connect character script to this script !!!)
 
     // Start is called before the first frame update
     void Start()
     {
+		pAttack = GetComponent<PlayerAttack>();
+		playerDamage = pAttack.damage;
         spawnPoint = transform.position;
 		isDead = false;
 		isAggro = false;
 		isMoving = false;
+		currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -98,12 +103,29 @@ public class EnemyManager : MonoBehaviour
 			//set animator trigger for getting hit
 			enemyAnim.SetTrigger ("enemyHit");
 			//create script for causing damage to enemy (!!!)
+			//TakeDamage(playerDamage);
 		}
 	}
 
-	//Work on a health system for enemy (!!!)
+	public void TakeDamage(int amount){
+		//nothing happens if enemy is dead
+		if(isDead)
+			return;
+
+		currentHealth -= amount;
+
+		//if enemy health drops to zero they're dead
+		if (currentHealth <= 0){
+			enemyKilled();
+		}
+	}
+
 	void enemyKilled(){
 		isDead = true;
 		enemyAnim.SetBool("enemyDead", true);
+	}
+
+	public void EnemyRespawn(){
+	
 	}
 }
