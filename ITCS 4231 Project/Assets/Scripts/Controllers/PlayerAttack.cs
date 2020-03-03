@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
 	[SerializeField] private Animator anim;
+	public int damage;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        damage = 10;
     }
 
     // Update is called once per frame
