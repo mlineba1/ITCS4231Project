@@ -32,7 +32,13 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+		StartCoroutine (CheckForAggro ());
+
+        if (isAggro==true){
+			followPlayer();
+
+			//Debug.Log("enemy is aggro");
+		}
     }
 
 	IEnumerator CheckForAggro(){
@@ -56,7 +62,7 @@ public class EnemyManager : MonoBehaviour
 		Vector3 towardsSpawnPoint = trans.position - spawnPoint;
 
 		// Are we close enough to attack -> Attack state
-		if (isAggro==true && towardsPlayer.magnitude < attackRange) {
+		if (towardsPlayer.magnitude < attackRange) {
 			//set animator to not move
 			isMoving = false;
 			enemyAnim.SetBool("enemyMoving", false);
@@ -66,6 +72,8 @@ public class EnemyManager : MonoBehaviour
 			//set the animator to attacking 
 			isAttacking = true;
 			enemyAnim.SetBool("enemyAttacking", true);
+
+			//Debug.Log("enemy attack!");
 
 			//set up script for different attack types (!!!)
 			//set animator for the big attack
