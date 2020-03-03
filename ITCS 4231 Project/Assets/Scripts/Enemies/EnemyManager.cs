@@ -9,6 +9,7 @@ public class EnemyManager : MonoBehaviour
 	[SerializeField] private float attackRange;
 	[SerializeField] private float aggroRadius;
     [SerializeField] private Transform playerTrans;
+	[SerializeField] private float moveSpeed;
 	private int maxHealth;
 	private int currentHealth;
 	private bool isAggro;
@@ -86,7 +87,7 @@ public class EnemyManager : MonoBehaviour
 			enemyAnim.SetBool("enemyMoving", true);
 
 			towardsPlayer.Normalize ();
-			//towardsPlayer *= moveSpeed * Time.deltaTime;
+			towardsPlayer *= moveSpeed * Time.deltaTime;
 
 			trans.position += towardsPlayer;
 		}
