@@ -12,6 +12,7 @@ public class EnemyManager : MonoBehaviour
 	[SerializeField] private float moveSpeed;
 	public int maxHealth;
 	public int currentHealth;
+	public int attackDamage;
 	private bool isAggro;
 	private bool isMoving;
 	private bool isAttacking;
@@ -74,6 +75,7 @@ public class EnemyManager : MonoBehaviour
 			enemyAnim.SetBool("enemyMoving", false);
 
 			//insert some attacking code here (!!!)
+			attackDamage = 5;
 
 			//set the animator to attacking 
 			isAttacking = true;
@@ -102,8 +104,8 @@ public class EnemyManager : MonoBehaviour
 		if (col.gameObject.tag == "Player"){
 			//set animator trigger for getting hit
 			enemyAnim.SetTrigger ("enemyHit");
-			//create script for causing damage to enemy (!!!)
-			//TakeDamage(playerDamage);
+			
+			TakeDamage(playerDamage);
 		}
 	}
 
