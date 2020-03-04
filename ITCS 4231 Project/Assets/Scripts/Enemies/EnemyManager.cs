@@ -10,6 +10,9 @@ public class EnemyManager : MonoBehaviour
 	[SerializeField] private float aggroRadius;
     [SerializeField] private Transform playerTrans;
 	[SerializeField] private float moveSpeed;
+	[SerializeField] private int smallDamage;
+	[SerializeField] private int bigDamage;
+	[SerializeField] private int enemyType;
 	public int maxHealth;
 	public int currentHealth;
 	public int attackDamage;
@@ -74,22 +77,55 @@ public class EnemyManager : MonoBehaviour
 			isMoving = false;
 			enemyAnim.SetBool("enemyMoving", false);
 
-			//insert some attacking code here (!!!)
-			attackDamage = 5;
+			//bigger enemy attack
+			if (enemyType == 2){
+				Debug.Log("Big enemy");
+				//1 in 4 chance of a big attack from an enemy
+				attackType = Random.Range(0, 4);
 
-			//set the animator to attacking 
-			isAttacking = true;
-			enemyAnim.SetBool("enemyAttacking", true);
-
+				if (attackType < 3){
+					Debug.Log("Small attack");
+					//set the animator to attacking 
+					isAttacking = true;
+					enemyAnim.SetBool("enemyAttacking", true);
+					attackDamage = smallDamage;
+				}
+				else {
+					Debug.Log("Big attack");
+					//set the animator to attacking 
+					isAttacking = true;
+					enemyAnim.SetBool("enemyBigAttacking", true);
+					attackDamage = bigDamage;
+				}
+			}
+			//basic enemy attack
+			else{
+				//set the animator to attacking 
+				isAttacking = true;
+				enemyAnim.SetBool("enemyAttacking", true);
+				attackDamage = smallDamage;
+			}
+			
 			//Debug.Log("enemy attack!");
 
 			//set up script for different attack types (!!!)
+
+
 			//set animator for the big attack
 			//enemyAnim.SetBool("enemyBigAttacking", true);
 		}
 		else{
 			//move closer to the player
 			isMoving = true;
+
+			if (enemyType == 2){
+				enemyAnim.SetBool("enemyAttacking", false);
+				enemyAnim.SetBool("enemyBigAttacking", false);
+			}
+			else{
+				enemyAnim.SetBool("enemyAttacking", false);
+			}
+
 			//set animator for moving
 			enemyAnim.SetBool("enemyMoving", true);
 
