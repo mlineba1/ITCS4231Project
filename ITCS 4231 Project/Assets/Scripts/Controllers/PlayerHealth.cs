@@ -74,5 +74,6 @@ public class PlayerHealth : MonoBehaviour
 		player.transform.position = respawnPoint;
 		isDead = false;
 		currentHealth = maxHealth;
+		anim.SetBool("isDead", false);
 	}
 }
