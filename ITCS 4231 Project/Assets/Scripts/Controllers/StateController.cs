@@ -95,11 +95,11 @@ namespace SA
             HandleMovementAnimations();
         }
         
-        void HandleMovementAnimations()
+        public void HandleMovementAnimations()
         {
-            //anim.SetFloat("vertical", moveAmount, 0.4f, delta);
-            //TODO Make animations work
 
+            //TODO Make animations work
+            
 
         }
 

@@ -241,7 +241,7 @@ Transform:
   m_GameObject: {fileID: 753696140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 6, y: 3, z: 6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -336,6 +336,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1824927424}
     m_Modifications:
+    - target: {fileID: -5471765307890752043, guid: f0887cfe70370e745aa609c40c846950,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1589651630}
+    - target: {fileID: -5471765307890752043, guid: f0887cfe70370e745aa609c40c846950,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1915438341610204, guid: f0887cfe70370e745aa609c40c846950, type: 3}
       propertyPath: m_Name
       value: Crusader knight
@@ -382,6 +392,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4505134156308728, guid: f0887cfe70370e745aa609c40c846950, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95393711822423326, guid: f0887cfe70370e745aa609c40c846950,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3563105345653302112, guid: f0887cfe70370e745aa609c40c846950,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1589651630}
+    - target: {fileID: 3563105345653302112, guid: f0887cfe70370e745aa609c40c846950,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013255119786710147, guid: f0887cfe70370e745aa609c40c846950,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1589651630}
+    - target: {fileID: 6013255119786710147, guid: f0887cfe70370e745aa609c40c846950,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -477,13 +512,38 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360730551}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.9239533, y: -0.0754661, z: 0.24757251, w: 0.28164336}
+  m_LocalPosition: {x: -1.011, y: 3.027, z: 1.751}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 146.095, y: -30, z: 0}
+--- !u!1 &1589651626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1915438341610204, guid: f0887cfe70370e745aa609c40c846950,
+    type: 3}
+  m_PrefabInstance: {fileID: 1061627373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1589651630 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95393711822423326, guid: f0887cfe70370e745aa609c40c846950,
+    type: 3}
+  m_PrefabInstance: {fileID: 1061627373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1589651631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589651626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbca50ec29a95f14ea0ab155db21b164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vertical: 0
 --- !u!1 &1629368269
 GameObject:
   m_ObjectHideFlags: 0
