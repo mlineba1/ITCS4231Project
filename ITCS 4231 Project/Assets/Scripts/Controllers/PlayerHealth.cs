@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
 	[SerializeField] private Animator anim;
+	[SerializeField] private Transform player;
+	private Vector3 respawnPoint;
 	private bool isDead;
 	public int maxHealth;
 	public int currentHealth;
@@ -34,6 +36,15 @@ public class PlayerHealth : MonoBehaviour
 			
 			TakeDamage(enemyDamage);
 		}
+		if (col.gameObject.tag == "Checkpoint"){
+			//save a Vector3 value as a place to respawn at
+			respawnPoint = col.transform.position;
+
+			//Heal player
+			currentHealth = maxHealth;
+
+			//restore potions (!!!)
+		}
 	}
 
 	public void TakeDamage(int amount){
@@ -54,5 +65,14 @@ public class PlayerHealth : MonoBehaviour
 
 		//set animator for dying
 		anim.SetBool("isDead", true);
+
+		//respawn
+		respawn();
+	}
+
+	void respawn(){
+		player.transform.position = respawnPoint();
+		isDead = false;
+		currentHealth = maxHealth;
 	}
 }

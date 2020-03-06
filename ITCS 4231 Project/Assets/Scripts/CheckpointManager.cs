@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class CheckpointManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject checkpoint;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	void OnTriggerEnter(Collider col){
+		if (col.gameObject.tag == "Player"){
+			Destroy(Checkpoint);
+		}
+	}
 }
