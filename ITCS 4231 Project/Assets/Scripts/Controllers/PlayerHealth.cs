@@ -71,7 +71,7 @@ public class PlayerHealth : MonoBehaviour
 	}
 
 	void respawn(){
-		player.transform.position = respawnPoint();
+		player.transform.position = respawnPoint;
 		isDead = false;
 		currentHealth = maxHealth;
 	}

@@ -21,6 +21,7 @@ public class EnemyManager : MonoBehaviour
 	private bool isAttacking;
 	private Vector3 spawnPoint;
 	private int attackType;
+	private int respawnNum;
 	private bool isDead;
 	private PlayerAttack pAttack;
 	private int playerDamage;
@@ -37,6 +38,8 @@ public class EnemyManager : MonoBehaviour
 		isAggro = false;
 		isMoving = false;
 		currentHealth = maxHealth;
+
+		respawnNum = Random.Range(0, 4);
     }
 
     // Update is called once per frame
@@ -164,6 +167,11 @@ public class EnemyManager : MonoBehaviour
 	}
 
 	public void EnemyRespawn(){
-	
+		if (respawnNum == CheckpointManager.respawnSignal){
+
+			isDead = false;
+			currentHealth = maxHealth;
+			enemyAnim.SetBool("enemyDead", false);
+		}
 	}
 }
