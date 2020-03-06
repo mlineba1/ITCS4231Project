@@ -69,8 +69,8 @@ namespace SA
             states.moveDir = (v + h).normalized;
            
             float m = Mathf.Abs(horizontal) + Mathf.Abs(vertical);
-            states.moveAmount = Mathf.Clamp(m,0,5);
-            states.HandleMovementAnimations();
+            states.moveAmount = Mathf.Clamp(m,0,1);
+           
             
            
             

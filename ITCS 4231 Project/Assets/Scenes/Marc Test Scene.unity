@@ -340,7 +340,7 @@ PrefabInstance:
         type: 3}
       propertyPath: anim
       value: 
-      objectReference: {fileID: 1589651630}
+      objectReference: {fileID: 0}
     - target: {fileID: -5471765307890752043, guid: f0887cfe70370e745aa609c40c846950,
         type: 3}
       propertyPath: m_Enabled
@@ -544,6 +544,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vertical: 0
+  attacks:
+  - atack1
+  - atack2
+  - atack3
+  playAnim: 0
+  enableRM: 0
 --- !u!1 &1629368269
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +647,7 @@ MonoBehaviour:
   toGround: 0.5
   run: 0
   activeModel: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 1589651630}
   rigid: {fileID: 0}
   delta: 0
   ignoreLayers:

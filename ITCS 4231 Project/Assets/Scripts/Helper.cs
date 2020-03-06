@@ -11,9 +11,12 @@ namespace SA {
         public string[] attacks;
         public bool playAnim;
 
-        
+
+        public bool enableRM;
 
         Animator anim;
+
+
     void Start()
         {
             anim = GetComponent<Animator>();
@@ -22,6 +25,12 @@ namespace SA {
         // Update is called once per frame
         void Update()
         {
+            enableRM = !anim.GetBool("canMove");
+            anim.applyRootMotion = enableRM;
+
+            if (enableRM)
+                return;
+
             if (playAnim)
             {
                 string targetAnim;
@@ -31,6 +40,8 @@ namespace SA {
 
                 vertical = 0;
                 anim.CrossFade(targetAnim, 0.2f);
+              //  anim.SetBool("canMove",false);
+                //enableRM = true;
                 playAnim = false;
             }
 

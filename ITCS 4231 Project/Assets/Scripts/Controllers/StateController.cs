@@ -92,14 +92,15 @@ namespace SA
             Quaternion tr = Quaternion.LookRotation(targetDir);
             Quaternion targetRotation = Quaternion.Slerp(transform.rotation, tr, delta * moveAmount * rotateSpeed);
             transform.rotation = targetRotation;
+
             HandleMovementAnimations();
         }
         
         public void HandleMovementAnimations()
         {
 
-            //TODO Make animations work
             
+            anim.SetFloat("vertical", moveAmount, 0.4f, delta);
 
         }
 
