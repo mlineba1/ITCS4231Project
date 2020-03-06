@@ -1515,8 +1515,12 @@ GameObject:
   m_Component:
   - component: {fileID: 469982}
   - component: {fileID: 9545580}
+  - component: {fileID: 5947403019218812159}
+  - component: {fileID: 1732364979654809707}
+  - component: {fileID: 4078307261650886892}
+  - component: {fileID: 3009483444941425036}
   m_Layer: 0
-  m_Name: VAMPIRE_PBR
+  m_Name: vampyr monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1557,6 +1561,70 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5947403019218812159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2cc873a10f52ca4196f1f2626e43d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAnim: {fileID: 9545580}
+  trans: {fileID: 469982}
+  attackRange: 0
+  aggroRadius: 0
+  playerTrans: {fileID: 0}
+  moveSpeed: 0
+  smallDamage: 0
+  bigDamage: 0
+  enemyType: 2
+  maxHealth: 0
+  currentHealth: 0
+  attackDamage: 0
+--- !u!136 &1732364979654809707
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.4, z: -0.1}
+--- !u!135 &4078307261650886892
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 1.2, y: 1.4, z: 0.3}
+--- !u!135 &3009483444941425036
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: -1.2, y: 1.4, z: 0.3}
 --- !u!1 &185904
 GameObject:
   m_ObjectHideFlags: 0

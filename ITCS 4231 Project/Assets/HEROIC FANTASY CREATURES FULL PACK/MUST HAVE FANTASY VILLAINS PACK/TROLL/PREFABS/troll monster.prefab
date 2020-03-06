@@ -168,6 +168,10 @@ GameObject:
   m_Component:
   - component: {fileID: 457106}
   - component: {fileID: 95141765470247508}
+  - component: {fileID: 7131602632851154093}
+  - component: {fileID: 1010877386613597354}
+  - component: {fileID: 2858855856454317337}
+  - component: {fileID: 8064120426322586781}
   m_Layer: 0
   m_Name: troll monster
   m_TagString: Enemy
@@ -210,6 +214,70 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &7131602632851154093
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 4.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.2, z: 0}
+--- !u!135 &1010877386613597354
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 2.5, y: 2, z: 1.3}
+--- !u!135 &2858855856454317337
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: -2.5, y: 2, z: 1.3}
+--- !u!114 &8064120426322586781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2cc873a10f52ca4196f1f2626e43d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAnim: {fileID: 95141765470247508}
+  trans: {fileID: 457106}
+  attackRange: 0
+  aggroRadius: 0
+  playerTrans: {fileID: 0}
+  moveSpeed: 0
+  smallDamage: 0
+  bigDamage: 0
+  enemyType: 2
+  maxHealth: 0
+  currentHealth: 0
+  attackDamage: 0
 --- !u!1 &119550
 GameObject:
   m_ObjectHideFlags: 0
