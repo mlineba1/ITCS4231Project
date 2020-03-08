@@ -46,9 +46,16 @@ namespace SA
             camController.Tick(delta);
         }
 
+
+        /// <summary>
+        /// Player Movement and button input
+        /// </summary>
             void GetInput()
         {
-
+            if (Input.GetMouseButton(0))
+            {
+                states.anim.SetBool("Attacking", true);
+            }
 
          
             
@@ -57,7 +64,9 @@ namespace SA
         }
 
 
-
+        /// <summary>
+        /// Calculated movement
+        /// </summary>
         void UpdateStates()
         {
             states.horizontal = horizontal;

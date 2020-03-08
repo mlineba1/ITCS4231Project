@@ -5,47 +5,55 @@ using UnityEngine;
 namespace SA {
     public class Helper : MonoBehaviour
     {
-        [Range(0, 1)]
-        public float vertical;
+       
+        
 
-        public string[] attacks;
-        public bool playAnim;
+         public string[] attacks = new string[3];
+        
 
 
-        public bool enableRM;
+     
 
-        Animator anim;
+       public  Animator anim;
 
 
     void Start()
         {
             anim = GetComponent<Animator>();
+
+            //Populate Attack animation Names
+            attacks[0] = "atack1 0";
+            attacks[1] = "atack2 0";
+            attacks[2] = "atack3 0";
         }
 
         // Update is called once per frame
         void Update()
         {
-            enableRM = !anim.GetBool("canMove");
-            anim.applyRootMotion = enableRM;
+          
 
-            if (enableRM)
-                return;
-
-            if (playAnim)
+            if (anim.GetBool("Attacking"))
             {
-                string targetAnim;
-                int r = Random.Range(0, attacks.Length);
-                targetAnim = attacks[r];
-                
-
-                vertical = 0;
-                anim.CrossFade(targetAnim, 0.2f);
-              //  anim.SetBool("canMove",false);
-                //enableRM = true;
-                playAnim = false;
+                PlayerAttack();
             }
 
-            anim.SetFloat("vertical", vertical);
+           
         }
+
+        /// <summary>
+        /// Chooses a random attack and sets "Attacking" back to false
+        /// </summary>
+        void PlayerAttack()
+        {
+            string targetAnim;
+            int r = Random.Range(0, attacks.Length);
+            targetAnim = attacks[r];
+
+
+           
+            anim.CrossFade(targetAnim, 0.2f);
+            anim.SetBool("Attacking", false);
+        }
+
     }
 }

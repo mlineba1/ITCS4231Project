@@ -18,6 +18,8 @@ namespace SA
         public float toGround = 0.5f;
 
         public bool run;
+        public bool test1;
+        public bool test2;
         
 
 
@@ -66,6 +68,11 @@ namespace SA
             anim.applyRootMotion = false;
         }
         
+
+        /// <summary>
+        /// Handles movement Animations, and calculates movement
+        /// </summary>
+        /// <param name="d"></param>
         public void FixedTick(float d)
         {
             delta = d;
@@ -92,15 +99,20 @@ namespace SA
             Quaternion tr = Quaternion.LookRotation(targetDir);
             Quaternion targetRotation = Quaternion.Slerp(transform.rotation, tr, delta * moveAmount * rotateSpeed);
             transform.rotation = targetRotation;
-
+            if (test1)
+            {
+                Debug.Log("Fixed Tick reached");
+                test1 = false;
+            }
             HandleMovementAnimations();
         }
         
+
         public void HandleMovementAnimations()
         {
 
             
-            anim.SetFloat("vertical", moveAmount, 0.4f, delta);
+            anim.SetFloat("vertical", moveAmount);
 
         }
 
