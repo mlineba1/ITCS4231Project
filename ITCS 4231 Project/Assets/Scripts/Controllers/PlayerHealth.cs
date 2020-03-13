@@ -8,10 +8,9 @@ public class PlayerHealth : MonoBehaviour
 	[SerializeField] private Transform player;
 	private Vector3 respawnPoint;
 	private bool isDead;
-	public int maxHealth;
-	public int currentHealth;
 	private EnemyManager enem;
 	private int enemyDamage;
+	public PlayerHealthbar healthbar;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +18,6 @@ public class PlayerHealth : MonoBehaviour
         enem = GetComponent<EnemyManager>();
 		enemyDamage = enem.attackDamage;
 		isDead = false;
-		currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -34,29 +32,21 @@ public class PlayerHealth : MonoBehaviour
 			//set animator trigger for getting hit
 			anim.SetTrigger ("playerHit");
 			
-			TakeDamage(enemyDamage);
+			healthbar.OnTakeDamage(enemyDamage);
+
+			//if enemy health drops to zero they're dead
+			if (healthbar.currentHealth <= 0){
+				playerDeath();
+			}
 		}
 		if (col.gameObject.tag == "Checkpoint"){
 			//save a Vector3 value as a place to respawn at
 			respawnPoint = col.transform.position;
 
 			//Heal player
-			currentHealth = maxHealth;
+			healthbar.currentHealth = healthbar.maxHealth;
 
 			//restore potions (!!!)
-		}
-	}
-
-	public void TakeDamage(int amount){
-		//nothing happens if enemy is dead
-		if(isDead)
-			return;
-
-		currentHealth -= amount;
-
-		//if enemy health drops to zero they're dead
-		if (currentHealth <= 0){
-			playerDeath();
 		}
 	}
 
@@ -73,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
 	void respawn(){
 		player.transform.position = respawnPoint;
 		isDead = false;
-		currentHealth = maxHealth;
+		healthbar.currentHealth = healthbar.maxHealth;
 		anim.SetBool("isDead", false);
 	}
 }

@@ -25,6 +25,7 @@ public class EnemyManager : MonoBehaviour
 	private bool isDead;
 	private PlayerAttack pAttack;
 	private int playerDamage;
+	private float turnSpeed;
 
 	//private static CharacterManager character; (connect character script to this script !!!)
 
@@ -38,6 +39,7 @@ public class EnemyManager : MonoBehaviour
 		isAggro = false;
 		isMoving = false;
 		currentHealth = maxHealth;
+		turnSpeed = 5f;
 
 		respawnNum = Random.Range(0, 4);
     }
@@ -76,6 +78,9 @@ public class EnemyManager : MonoBehaviour
 
 		// Are we close enough to attack -> Attack state
 		if (towardsPlayer.magnitude < attackRange) {
+			//face the Player
+			facePlayer();
+
 			//set animator to not move
 			isMoving = false;
 			enemyAnim.SetBool("enemyMoving", false);
@@ -173,5 +178,13 @@ public class EnemyManager : MonoBehaviour
 			currentHealth = maxHealth;
 			enemyAnim.SetBool("enemyDead", false);
 		}
+	}
+
+	void facePlayer(){
+		Vector3 towardsPlayer = playerTrans.position - trans.position;
+		towardsPlayer.y = 0f;
+
+		Quaternion targetRotation = Quaternion.LookRotation (towardsPlayer);
+		trans.rotation = Quaternion.Lerp (trans.rotation, targetRotation, turnSpeed * Time.deltaTime);
 	}
 }
