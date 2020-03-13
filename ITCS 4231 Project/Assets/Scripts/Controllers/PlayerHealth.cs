@@ -10,13 +10,13 @@ public class PlayerHealth : MonoBehaviour
 	private bool isDead;
 	private EnemyManager enem;
 	private int enemyDamage;
-	public PlayerHealthbar healthbar;
+	public HealthbarController healthbar;
 
     // Start is called before the first frame update
     void Start()
     {
         enem = GetComponent<EnemyManager>();
-		enemyDamage = enem.attackDamage;
+		//enemyDamage = enem.attackDamage;
 		isDead = false;
     }
 
@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
 			//set animator trigger for getting hit
 			anim.SetTrigger ("playerHit");
 			
-			healthbar.OnTakeDamage(enemyDamage);
+			healthbar.OnTakeDamage(enem.attackDamage);
 
 			//if enemy health drops to zero they're dead
 			if (healthbar.currentHealth <= 0){

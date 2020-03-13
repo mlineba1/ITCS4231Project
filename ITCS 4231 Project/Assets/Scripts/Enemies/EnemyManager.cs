@@ -13,8 +13,6 @@ public class EnemyManager : MonoBehaviour
 	[SerializeField] private int smallDamage;
 	[SerializeField] private int bigDamage;
 	[SerializeField] private int enemyType;
-	public int maxHealth;
-	public int currentHealth;
 	public int attackDamage;
 	private bool isAggro;
 	private bool isMoving;
@@ -26,6 +24,7 @@ public class EnemyManager : MonoBehaviour
 	private PlayerAttack pAttack;
 	private int playerDamage;
 	private float turnSpeed;
+	public HealthbarController enemyHealthbar;
 
 	//private static CharacterManager character; (connect character script to this script !!!)
 
@@ -33,12 +32,11 @@ public class EnemyManager : MonoBehaviour
     void Start()
     {
 		pAttack = GetComponent<PlayerAttack>();
-		playerDamage = pAttack.damage;
+		//playerDamage = pAttack.damage;
         spawnPoint = transform.position;
 		isDead = false;
 		isAggro = false;
 		isMoving = false;
-		currentHealth = maxHealth;
 		turnSpeed = 5f;
 
 		respawnNum = Random.Range(0, 4);
@@ -149,20 +147,12 @@ public class EnemyManager : MonoBehaviour
 			//set animator trigger for getting hit
 			enemyAnim.SetTrigger ("enemyHit");
 			
-			TakeDamage(playerDamage);
-		}
-	}
+			enemyHealthbar.OnTakeDamage(pAttack.damage);
 
-	public void TakeDamage(int amount){
-		//nothing happens if enemy is dead
-		if(isDead)
-			return;
-
-		currentHealth -= amount;
-
-		//if enemy health drops to zero they're dead
-		if (currentHealth <= 0){
-			enemyKilled();
+			//if enemy health drops to zero they're dead
+			if (enemyHealthbar.currentHealth <= 0){
+				enemyKilled();
+			}
 		}
 	}
 
@@ -175,7 +165,7 @@ public class EnemyManager : MonoBehaviour
 		if (respawnNum == CheckpointManager.respawnSignal){
 
 			isDead = false;
-			currentHealth = maxHealth;
+			enemyHealthbar.currentHealth = enemyHealthbar.maxHealth;
 			enemyAnim.SetBool("enemyDead", false);
 		}
 	}

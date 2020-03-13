@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealthbar : MonoBehaviour
+public class HealthbarController : MonoBehaviour
 {
 	public Image Healthbar;
 	public float maxHealth;
