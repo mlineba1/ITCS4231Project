@@ -7,12 +7,12 @@ AvatarMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: UpperBody
-  m_Mask: 00000000010000000100000000000000000000000100000001000000010000000100000000000000000000000100000001000000
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   m_Elements:
   - m_Path: 
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_ChestEndEffector
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_ChestOriginEffector
@@ -20,7 +20,7 @@ AvatarMask:
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_HeadEffector
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_Hips
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_LeftUpLeg
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_LeftUpLeg/Character1_Ctrl_LeftLeg
@@ -144,13 +144,13 @@ AvatarMask:
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_Hips/Character1_Ctrl_Spine/Character1_Ctrl_Spine1/Character1_Ctrl_Spine2/Character1_Ctrl_RightShoulder/Character1_Ctrl_RightArm/Character1_Ctrl_RightForeArm/Character1_Ctrl_RightHand/Character1_Ctrl_RightHandThumb1/Character1_Ctrl_RightHandThumb2/Character1_Ctrl_RightHandThumb3/Character1_Ctrl_RightHandThumb4
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_HipsEffector
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_LeftAnkleEffector
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_LeftElbowEffector
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_LeftFootEffector
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_LeftHandIndexEffector
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_LeftHandMiddleEffector
@@ -162,19 +162,19 @@ AvatarMask:
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_LeftHandThumbEffector
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_LeftHipEffector
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_LeftKneeEffector
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_LeftShoulderEffector
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_LeftWristEffector
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_RightAnkleEffector
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_RightElbowEffector
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_RightFootEffector
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_RightHandIndexEffector
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_RightHandMiddleEffector
@@ -186,19 +186,19 @@ AvatarMask:
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_RightHandThumbEffector
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_RightHipEffector
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_RightKneeEffector
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_RightShoulderEffector
     m_Weight: 1
   - m_Path: Character1_Ctrl_Reference/Character1_Ctrl_RightWristEffector
     m_Weight: 1
   - m_Path: Character1_Reference
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Character1_Reference/Character1_Hips
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Reference/Character1_Hips/Character1_LeftUpLeg
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Reference/Character1_Hips/Character1_LeftUpLeg/Character1_LeftLeg
     m_Weight: 1
   - m_Path: Character1_Reference/Character1_Hips/Character1_LeftUpLeg/Character1_LeftLeg/Character1_LeftFoot
@@ -206,15 +206,15 @@ AvatarMask:
   - m_Path: Character1_Reference/Character1_Hips/Character1_LeftUpLeg/Character1_LeftLeg/Character1_LeftFoot/Character1_LeftToeBase
     m_Weight: 1
   - m_Path: Character1_Reference/Character1_Hips/Character1_RightUpLeg
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Reference/Character1_Hips/Character1_RightUpLeg/Character1_RightLeg
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Reference/Character1_Hips/Character1_RightUpLeg/Character1_RightLeg/Character1_RightFoot
     m_Weight: 1
   - m_Path: Character1_Reference/Character1_Hips/Character1_RightUpLeg/Character1_RightLeg/Character1_RightFoot/Character1_RightToeBase
     m_Weight: 1
   - m_Path: Character1_Reference/Character1_Hips/Character1_Spine
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character1_Reference/Character1_Hips/Character1_Spine/Character1_backmidtoga1
     m_Weight: 1
   - m_Path: Character1_Reference/Character1_Hips/Character1_Spine/Character1_backmidtoga1/Character1_backmidtoga2
@@ -360,7 +360,7 @@ AvatarMask:
   - m_Path: Character1_Reference/Character1_Hips/Character1_Spine/Character1_Spine1/Character1_Spine2/Character1_RightShoulder/Character1_RightShoulder2
     m_Weight: 1
   - m_Path: group1
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: group1/crusader_body:Group3935
     m_Weight: 1
   - m_Path: group1/crusader_body:Group12272
@@ -387,5 +387,7 @@ AvatarMask:
     m_Weight: 1
   - m_Path: group1/crusader_body:ZBrush_defualt_group
     m_Weight: 1
-  - m_Path: mech:RetopoGroup1
+  - m_Path: group2
+    m_Weight: 0
+  - m_Path: group2/mech:RetopoGroup1
     m_Weight: 1

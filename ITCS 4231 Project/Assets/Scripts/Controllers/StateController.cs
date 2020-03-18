@@ -111,7 +111,6 @@ namespace SA
         public void HandleMovementAnimations()
         {
 
-            
             anim.SetFloat("vertical", moveAmount);
 
         }
