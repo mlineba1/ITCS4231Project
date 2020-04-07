@@ -32,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
 			//set animator trigger for getting hit
 			anim.SetTrigger ("playerHit");
 			
+			Debug.Log("enemy's damage " + enem.attackDamage);
 			healthbar.OnTakeDamage(enem.attackDamage);
 
 			//if enemy health drops to zero they're dead
