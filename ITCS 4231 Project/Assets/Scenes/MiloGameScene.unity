@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 1234611886}
   m_Layer: 0
   m_Name: Controller
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1217,7 +1217,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1234611885}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -2030,6 +2030,11 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 1746992625}
+    - target: {fileID: 7226530082406537668, guid: 746041d87bbb1934aa613f48eff3b825,
+        type: 3}
+      propertyPath: bigDamage
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746041d87bbb1934aa613f48eff3b825, type: 3}
 --- !u!1001 &1857848494
