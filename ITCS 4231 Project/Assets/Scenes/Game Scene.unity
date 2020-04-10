@@ -277,12 +277,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a972a4ce5036c2459c4bea45ef9921d, type: 3}
+--- !u!1 &49603100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 124686, guid: 2a972a4ce5036c2459c4bea45ef9921d,
+    type: 3}
+  m_PrefabInstance: {fileID: 49603099}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &49603101 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 428530, guid: 2a972a4ce5036c2459c4bea45ef9921d,
     type: 3}
   m_PrefabInstance: {fileID: 49603099}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &49603102
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49603100}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &73251030
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +816,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 461352708}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &461352710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 181942, guid: 662c0b6b9e9922c45b57c16a9981f996,
+    type: 3}
+  m_PrefabInstance: {fileID: 461352708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &461352711
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461352710}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &516490178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,6 +1991,28 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1200418001}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1200418004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 173188, guid: 36e4b3d4634e64f4989a45741cdd7c3a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1200418001}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1200418005
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200418004}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1261395762
 GameObject:
   m_ObjectHideFlags: 0
@@ -3093,6 +3159,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1875199638}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1875199640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 114702, guid: 1e337205febf0bb4384ee08cc2e75c1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1875199638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1875199641
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875199640}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1885358651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3767,6 +3855,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2060100209}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &2060100211
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060100210}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2060100212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 440710, guid: 746041d87bbb1934aa613f48eff3b825,
@@ -3787,6 +3891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAnim: {fileID: 1200418003}
   trans: {fileID: 1200418002}
+  rb: {fileID: 0}
   attackRange: 1
   aggroRadius: 3
   playerTrans: {fileID: 0}

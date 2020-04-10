@@ -6,7 +6,8 @@ public class EnemyManager : MonoBehaviour
 {
 	[SerializeField] private Animator enemyAnim;
 	[SerializeField] private Transform trans;
-	[SerializeField] private float attackRange;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private float attackRange;
 	[SerializeField] private float aggroRadius;
     [SerializeField] private Transform playerTrans;
 	[SerializeField] private float moveSpeed;
@@ -31,6 +32,7 @@ public class EnemyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
 		pAttack = GetComponent<PlayerAttack>();
 		//playerDamage = pAttack.damage;
         spawnPoint = transform.position;
@@ -70,8 +72,8 @@ public class EnemyManager : MonoBehaviour
 
 	//following player
 	private void followPlayer(){
-		
-		Vector3 towardsPlayer =playerTrans.position - trans.position;
+
+        Vector3 towardsPlayer = playerTrans.position - trans.position;
 		Vector3 towardsSpawnPoint = trans.position - spawnPoint;
 
 		// Are we close enough to attack -> Attack state
@@ -112,13 +114,6 @@ public class EnemyManager : MonoBehaviour
 				attackDamage = smallDamage;
 			}
 			
-			//Debug.Log("enemy attack!");
-
-			//set up script for different attack types (!!!)
-
-
-			//set animator for the big attack
-			//enemyAnim.SetBool("enemyBigAttacking", true);
 		}
 		else{
 			//move closer to the player
@@ -136,10 +131,12 @@ public class EnemyManager : MonoBehaviour
 			enemyAnim.SetBool("enemyMoving", true);
 
 			towardsPlayer.Normalize ();
-			towardsPlayer *= moveSpeed * Time.deltaTime;
+			//towardsPlayer *= moveSpeed * Time.deltaTime;
 
-			trans.position += towardsPlayer;
-		}
+            //trans.position += towardsPlayer;
+
+            rb.AddForce(towardsPlayer * moveSpeed);
+        }
 	}
 
 	void OnCollisionEnter(Collision col){
