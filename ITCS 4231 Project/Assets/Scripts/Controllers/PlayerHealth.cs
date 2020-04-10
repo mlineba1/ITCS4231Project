@@ -29,6 +29,9 @@ public class PlayerHealth : MonoBehaviour
 	void OnCollisionEnter(Collision col){
 
 		if (col.gameObject.tag == "Enemy"){
+
+            Debug.Log("Hit by enemy!");
+
 			//set animator trigger for getting hit
 			anim.SetTrigger ("playerHit");
 			

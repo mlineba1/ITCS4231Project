@@ -141,6 +141,9 @@ public class EnemyManager : MonoBehaviour
 
 	void OnCollisionEnter(Collision col){
 		if (col.gameObject.tag == "Player"){
+
+            Debug.Log("Hit by player!");
+
 			//set animator trigger for getting hit
 			enemyAnim.SetTrigger ("enemyHit");
 			

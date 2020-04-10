@@ -1452,9 +1452,20 @@ PrefabInstance:
     - target: {fileID: 6013255119786710147, guid: f0887cfe70370e745aa609c40c846950,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6013255119786710147, guid: f0887cfe70370e745aa609c40c846950,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1676799602}
+    - target: {fileID: 6013255119786710147, guid: f0887cfe70370e745aa609c40c846950,
+        type: 3}
+      propertyPath: healthbar
+      value: 
+      objectReference: {fileID: 1833172175}
+    m_RemovedComponents:
+    - {fileID: -5471765307890752043, guid: f0887cfe70370e745aa609c40c846950, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f0887cfe70370e745aa609c40c846950, type: 3}
 --- !u!1 &1391775833
 GameObject:
@@ -1807,8 +1818,8 @@ Rigidbody:
   m_GameObject: {fileID: 1746992618}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 4
+  m_AngularDrag: 999
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1850,7 +1861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300.5, y: 137.5}
+  m_AnchoredPosition: {x: -78.3, y: 74.5}
   m_SizeDelta: {x: 150.4, y: 18.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1833172175
