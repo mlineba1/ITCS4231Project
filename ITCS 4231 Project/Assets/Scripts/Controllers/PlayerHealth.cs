@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
 	void OnCollisionEnter(Collision col){
 
-		if (col.gameObject.tag == "Enemy"){
+		if (col.gameObject.tag == "EnemyAttack"){
 
             Debug.Log("Hit by enemy!");
 
