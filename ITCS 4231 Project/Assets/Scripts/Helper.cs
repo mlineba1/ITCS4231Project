@@ -8,13 +8,13 @@ namespace SA {
        
         
 
-         public string[] attacks = new string[3];
+         public string[] lightAttacks = new string[2];
+        public string[] strongAttacks = new string[1];
         
 
 
-     
 
-       public  Animator anim;
+        public  Animator anim;
 
 
     void Start()
@@ -22,9 +22,9 @@ namespace SA {
             anim = GetComponent<Animator>();
 
             //Populate Attack animation Names
-            attacks[0] = "atack1 0";
-            attacks[1] = "atack2 0";
-            attacks[2] = "atack3 0";
+            strongAttacks[0] = "atack1 0";
+            lightAttacks[0] = "atack2 0";
+            lightAttacks[1] = "atack3 0";
         }
 
         // Update is called once per frame
@@ -32,9 +32,12 @@ namespace SA {
         {
           
 
-            if (anim.GetBool("Attacking"))
+            if (anim.GetBool("LightAttack"))
             {
-                PlayerAttack();
+                LightPlayerAttack();
+            } else if(anim.GetBool("StrongAttack"))
+            {
+                StrongPlayerAttack();
             }
 
            
@@ -43,16 +46,28 @@ namespace SA {
         /// <summary>
         /// Chooses a random attack and sets "Attacking" back to false
         /// </summary>
-        void PlayerAttack()
+        void LightPlayerAttack()
         {
             string targetAnim;
-            int r = Random.Range(0, attacks.Length);
-            targetAnim = attacks[r];
-
-
-           
+            int LA = Random.Range(0, 2); // range for number of attacks
+            
+            targetAnim = lightAttacks[LA];
+            Debug.Log("Light Attack" + LA + " Used.");
+         
             anim.CrossFade(targetAnim, 0.2f);
-            anim.SetBool("Attacking", false);
+            anim.SetBool("LightAttack", false);
+        }
+
+        void StrongPlayerAttack()
+        {
+            string targetAnim;
+            int SA = Random.Range(0, 0);// range for number of attacks
+            
+            targetAnim = strongAttacks[SA];
+            Debug.Log("Strong Attack" + SA + " Used.");
+
+            anim.CrossFade(targetAnim, 0.2f);
+            anim.SetBool("StrongAttack", false);
         }
 
     }

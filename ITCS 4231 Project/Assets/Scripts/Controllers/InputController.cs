@@ -8,7 +8,7 @@ namespace SA
     {
         float horizontal;
         float vertical;
-       
+        bool attackCD;
         StateController states;
         CameraController camController;
        
@@ -21,8 +21,8 @@ namespace SA
         {
             states = GetComponent<StateController>();
             states.Init();
+            attackCD = true;
 
-           
 
             camController = CameraController.singleton;
             camController.Init(this.transform);
@@ -52,9 +52,19 @@ namespace SA
         /// </summary>
             void GetInput()
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && attackCD)
             {
-                states.anim.SetBool("Attacking", true);
+                states.anim.SetBool("LightAttack", true);
+                attackCD = false;
+                Invoke("CoolDown", 2);
+
+            }
+
+            if(Input.GetMouseButton(1) && attackCD)
+            {
+                states.anim.SetBool("StrongAttack", true);
+                attackCD = false;
+                Invoke("CoolDown", 2);
             }
 
          
@@ -86,6 +96,11 @@ namespace SA
 
 
             
+        }
+
+        private void CoolDown()
+        {
+            attackCD = true;
         }
 
     }
