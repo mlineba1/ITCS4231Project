@@ -1766,9 +1766,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbca50ec29a95f14ea0ab155db21b164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attacks:
+  lightAttacks:
   - 
   - 
+  strongAttacks:
   - 
   anim: {fileID: 0}
 --- !u!4 &1676799602 stripped
@@ -2032,17 +2033,17 @@ PrefabInstance:
     - target: {fileID: 7226530082406537668, guid: 746041d87bbb1934aa613f48eff3b825,
         type: 3}
       propertyPath: attackRange
-      value: 2
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 7226530082406537668, guid: 746041d87bbb1934aa613f48eff3b825,
         type: 3}
       propertyPath: aggroRadius
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7226530082406537668, guid: 746041d87bbb1934aa613f48eff3b825,
         type: 3}
       propertyPath: moveSpeed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7226530082406537668, guid: 746041d87bbb1934aa613f48eff3b825,
         type: 3}

@@ -172,22 +172,22 @@ PrefabInstance:
     - target: {fileID: -6058860386748868775, guid: 2a972a4ce5036c2459c4bea45ef9921d,
         type: 3}
       propertyPath: attackRange
-      value: 5
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: -6058860386748868775, guid: 2a972a4ce5036c2459c4bea45ef9921d,
         type: 3}
       propertyPath: aggroRadius
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -6058860386748868775, guid: 2a972a4ce5036c2459c4bea45ef9921d,
         type: 3}
       propertyPath: playerTrans
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1584029521}
     - target: {fileID: -6058860386748868775, guid: 2a972a4ce5036c2459c4bea45ef9921d,
         type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -6058860386748868775, guid: 2a972a4ce5036c2459c4bea45ef9921d,
         type: 3}
@@ -219,6 +219,11 @@ PrefabInstance:
       propertyPath: enemyHealthbar
       value: 
       objectReference: {fileID: 1961571680}
+    - target: {fileID: -6058860386748868775, guid: 2a972a4ce5036c2459c4bea45ef9921d,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 49603102}
     - target: {fileID: 124686, guid: 2a972a4ce5036c2459c4bea45ef9921d, type: 3}
       propertyPath: m_Name
       value: cyclops monster
@@ -298,12 +303,12 @@ Rigidbody:
   m_GameObject: {fileID: 49603100}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 4
+  m_AngularDrag: 999
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!1 &73251030
 GameObject:
@@ -771,12 +776,12 @@ PrefabInstance:
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: aggroRadius
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: moveSpeed
-      value: 8
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
@@ -802,12 +807,17 @@ PrefabInstance:
         type: 3}
       propertyPath: playerTrans
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1584029521}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: enemyHealthbar
       value: 
       objectReference: {fileID: 1689162442}
+    - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 461352711}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 662c0b6b9e9922c45b57c16a9981f996, type: 3}
 --- !u!4 &461352709 stripped
@@ -831,12 +841,12 @@ Rigidbody:
   m_GameObject: {fileID: 461352710}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 4
+  m_AngularDrag: 999
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!1 &516490178
 GameObject:
@@ -1950,7 +1960,7 @@ PrefabInstance:
     - target: {fileID: 1497430804101483155, guid: 36e4b3d4634e64f4989a45741cdd7c3a,
         type: 3}
       propertyPath: aggroRadius
-      value: 5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1497430804101483155, guid: 36e4b3d4634e64f4989a45741cdd7c3a,
         type: 3}
@@ -1965,7 +1975,7 @@ PrefabInstance:
     - target: {fileID: 1497430804101483155, guid: 36e4b3d4634e64f4989a45741cdd7c3a,
         type: 3}
       propertyPath: moveSpeed
-      value: 6
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1497430804101483155, guid: 36e4b3d4634e64f4989a45741cdd7c3a,
         type: 3}
@@ -1976,7 +1986,12 @@ PrefabInstance:
         type: 3}
       propertyPath: playerTrans
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1584029521}
+    - target: {fileID: 1497430804101483155, guid: 36e4b3d4634e64f4989a45741cdd7c3a,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1200418005}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36e4b3d4634e64f4989a45741cdd7c3a, type: 3}
 --- !u!4 &1200418002 stripped
@@ -2006,12 +2021,12 @@ Rigidbody:
   m_GameObject: {fileID: 1200418004}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 4
+  m_AngularDrag: 999
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!1 &1261395762
 GameObject:
@@ -2187,6 +2202,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92b7ce30135a8464d9a59f4a5bc06b84, type: 3}
+--- !u!1 &1432995198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: fb09873443ab1854d8892a2693f70148,
+    type: 3}
+  m_PrefabInstance: {fileID: 1686601098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1432995199
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432995198}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1473420467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,9 +2696,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbca50ec29a95f14ea0ab155db21b164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attacks:
+  lightAttacks:
   - 
   - 
+  strongAttacks:
   - 
   anim: {fileID: 0}
 --- !u!4 &1584029521 stripped
@@ -3109,17 +3147,17 @@ PrefabInstance:
     - target: {fileID: 8064120426322586781, guid: 1e337205febf0bb4384ee08cc2e75c1d,
         type: 3}
       propertyPath: attackRange
-      value: 5
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 8064120426322586781, guid: 1e337205febf0bb4384ee08cc2e75c1d,
         type: 3}
       propertyPath: aggroRadius
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8064120426322586781, guid: 1e337205febf0bb4384ee08cc2e75c1d,
         type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8064120426322586781, guid: 1e337205febf0bb4384ee08cc2e75c1d,
         type: 3}
@@ -3145,12 +3183,17 @@ PrefabInstance:
         type: 3}
       propertyPath: playerTrans
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1584029521}
     - target: {fileID: 8064120426322586781, guid: 1e337205febf0bb4384ee08cc2e75c1d,
         type: 3}
       propertyPath: enemyHealthbar
       value: 
       objectReference: {fileID: 864359430}
+    - target: {fileID: 8064120426322586781, guid: 1e337205febf0bb4384ee08cc2e75c1d,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1875199641}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e337205febf0bb4384ee08cc2e75c1d, type: 3}
 --- !u!4 &1875199639 stripped
@@ -3174,12 +3217,12 @@ Rigidbody:
   m_GameObject: {fileID: 1875199640}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 4
+  m_AngularDrag: 999
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!1001 &1885358651
 PrefabInstance:
@@ -3847,7 +3890,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7226530082406537668, guid: 746041d87bbb1934aa613f48eff3b825, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 746041d87bbb1934aa613f48eff3b825, type: 3}
 --- !u!1 &2060100210 stripped
 GameObject:
@@ -3864,12 +3908,12 @@ Rigidbody:
   m_GameObject: {fileID: 2060100210}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 4
+  m_AngularDrag: 999
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!4 &2060100212 stripped
 Transform:
@@ -3889,18 +3933,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2cc873a10f52ca4196f1f2626e43d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAnim: {fileID: 1200418003}
-  trans: {fileID: 1200418002}
-  rb: {fileID: 0}
-  attackRange: 1
-  aggroRadius: 3
-  playerTrans: {fileID: 0}
-  moveSpeed: 4
-  smallDamage: 3
-  bigDamage: 0
+  enemyAnim: {fileID: 2060100214}
+  trans: {fileID: 2060100212}
+  rb: {fileID: 2060100211}
+  attackRange: 1.4
+  aggroRadius: 10
+  playerTrans: {fileID: 1584029521}
+  moveSpeed: 8
+  smallDamage: 5
+  bigDamage: 10
   enemyType: 0
   attackDamage: 0
   enemyHealthbar: {fileID: 1189006465}
+--- !u!95 &2060100214 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9532218, guid: 746041d87bbb1934aa613f48eff3b825,
+    type: 3}
+  m_PrefabInstance: {fileID: 2060100209}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2073931099
 PrefabInstance:
   m_ObjectHideFlags: 0
