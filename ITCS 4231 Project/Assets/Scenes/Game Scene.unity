@@ -633,8 +633,18 @@ PrefabInstance:
     - target: {fileID: 6013255119786710147, guid: f0887cfe70370e745aa609c40c846950,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6013255119786710147, guid: f0887cfe70370e745aa609c40c846950,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1584029521}
+    - target: {fileID: 6013255119786710147, guid: f0887cfe70370e745aa609c40c846950,
+        type: 3}
+      propertyPath: healthbar
+      value: 
+      objectReference: {fileID: 1520598805}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0887cfe70370e745aa609c40c846950, type: 3}
 --- !u!1 &390481250
@@ -3173,12 +3183,12 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyAnim
       value: 
-      objectReference: {fileID: 1200418003}
+      objectReference: {fileID: 1875199642}
     - target: {fileID: 8064120426322586781, guid: 1e337205febf0bb4384ee08cc2e75c1d,
         type: 3}
       propertyPath: trans
       value: 
-      objectReference: {fileID: 1200418002}
+      objectReference: {fileID: 1875199639}
     - target: {fileID: 8064120426322586781, guid: 1e337205febf0bb4384ee08cc2e75c1d,
         type: 3}
       propertyPath: playerTrans
@@ -3224,6 +3234,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!95 &1875199642 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95141765470247508, guid: 1e337205febf0bb4384ee08cc2e75c1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1875199638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1885358651
 PrefabInstance:
   m_ObjectHideFlags: 0
