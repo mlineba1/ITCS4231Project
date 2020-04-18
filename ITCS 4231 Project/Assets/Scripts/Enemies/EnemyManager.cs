@@ -40,7 +40,7 @@ public class EnemyManager : MonoBehaviour
 		isAggro = false;
 		isMoving = false;
 		turnSpeed = 5f;
-
+        
 		respawnNum = Random.Range(0, 4);
     }
 

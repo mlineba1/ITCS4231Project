@@ -1301,9 +1301,10 @@ ModelImporter:
       curves: []
       events:
       - time: 0.63309354
-        functionName: PlayerAttack1Event
+        functionName: PlayerStrongAttackEvent
         data: 
-        objectReferenceParameter: {instanceID: 0}
+        objectReferenceParameter: {fileID: 1915438341610204, guid: f0887cfe70370e745aa609c40c846950,
+          type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0

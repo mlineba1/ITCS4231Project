@@ -9,6 +9,7 @@ namespace SA
         float horizontal;
         float vertical;
         bool attackCD;
+        
         StateController states;
         CameraController camController;
        

@@ -1300,8 +1300,8 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.6384531
-        functionName: PlayerAttack3Event
+      - time: 0.5966121
+        functionName: PlayerLightAttackEvent
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

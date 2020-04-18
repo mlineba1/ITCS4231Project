@@ -1301,7 +1301,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.43162477
-        functionName: PlayerAttack2Event
+        functionName: PlayerLightAttackEvent
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
