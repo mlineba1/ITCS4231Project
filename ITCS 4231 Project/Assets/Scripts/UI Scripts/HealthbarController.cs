@@ -9,8 +9,21 @@ public class HealthbarController : MonoBehaviour
 	public float maxHealth;
 	public float currentHealth;
 
+    
+
+
     public void OnTakeDamage(int damage){
-		currentHealth = maxHealth - damage;
-		Healthbar.fillAmount = currentHealth/maxHealth;
+		currentHealth = currentHealth - damage;
+
+
+        if(currentHealth <= 0)
+        {
+            Healthbar.fillAmount = 0;
+        } else
+        {
+            Healthbar.fillAmount = currentHealth/maxHealth;
+        }
+
+		
 	}
 }

@@ -4,24 +4,46 @@ using UnityEngine;
 
 
 
+public class PlayerAttack : MonoBehaviour
+{
+    [SerializeField] private Animator anim;
+    public int lightDamage = 10;
+    public int heavyDamage = 17;
+    public bool canHit;
+    public bool lightHit;
+    public bool heavyHit;
+   
 
-    public class PlayerAttack : MonoBehaviour
+    public void PlayerLightAttackEvent()
     {
-        [SerializeField] private Animator anim;
-        public int damage = 5;
 
-       public void PlayerLightAttackEvent()
-       {
-        Debug.Log("Player Light Attack executed");
+        if (canHit)
+        {
+            Debug.Log("Player Light Attack hit enemy");
+            lightHit = true;
 
+        } else
+        {
+            Debug.Log("No enemy in front of player");
+        }
+        
 
-       }
-
-       public void PlayerStrongAttackEvent()
-       {
-        Debug.Log("Strong attack executed");
-
-       }
 
     }
+
+    public void PlayerStrongAttackEvent()
+    {
+        if (canHit)
+        {
+            Debug.Log("Player Strong Attack hit enemy");
+            heavyHit = true;
+        }
+        else
+        {
+            Debug.Log("No enemy in front of player");
+        }
+
+    }
+
+}
 

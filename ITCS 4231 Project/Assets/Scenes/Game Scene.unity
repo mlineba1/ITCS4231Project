@@ -224,6 +224,11 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 49603102}
+    - target: {fileID: -6058860386748868775, guid: 2a972a4ce5036c2459c4bea45ef9921d,
+        type: 3}
+      propertyPath: pAttack
+      value: 
+      objectReference: {fileID: 369030833}
     - target: {fileID: 124686, guid: 2a972a4ce5036c2459c4bea45ef9921d, type: 3}
       propertyPath: m_Name
       value: cyclops monster
@@ -522,6 +527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crusader knight
       objectReference: {fileID: 0}
+    - target: {fileID: 1915438341610204, guid: f0887cfe70370e745aa609c40c846950, type: 3}
+      propertyPath: m_TagString
+      value: Sword
+      objectReference: {fileID: 0}
     - target: {fileID: 4505134156308728, guid: f0887cfe70370e745aa609c40c846950, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.05
@@ -647,6 +656,18 @@ PrefabInstance:
       objectReference: {fileID: 1520598805}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0887cfe70370e745aa609c40c846950, type: 3}
+--- !u!114 &369030833 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3563105345653302112, guid: f0887cfe70370e745aa609c40c846950,
+    type: 3}
+  m_PrefabInstance: {fileID: 369030832}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584029515}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d928435fe76e345b4166da064a908c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &390481250
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +849,11 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 461352711}
+    - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
+        type: 3}
+      propertyPath: pAttack
+      value: 
+      objectReference: {fileID: 369030833}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 662c0b6b9e9922c45b57c16a9981f996, type: 3}
 --- !u!4 &461352709 stripped
@@ -873,7 +899,7 @@ GameObject:
   - component: {fileID: 516490179}
   m_Layer: 0
   m_Name: Controller
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1440,7 +1466,6 @@ GameObject:
   - component: {fileID: 864359432}
   - component: {fileID: 864359431}
   - component: {fileID: 864359430}
-  - component: {fileID: 864359429}
   - component: {fileID: 864359428}
   m_Layer: 5
   m_Name: TrollHealthbar_BG
@@ -1481,20 +1506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39dc6159f3236b842b33f63ff1ee9e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
---- !u!114 &864359429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864359426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39dc6159f3236b842b33f63ff1ee9e90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 621430037}
 --- !u!114 &864359430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1855,7 +1867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39dc6159f3236b842b33f63ff1ee9e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 621430037}
 --- !u!114 &1189006465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2002,6 +2014,11 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 1200418005}
+    - target: {fileID: 1497430804101483155, guid: 36e4b3d4634e64f4989a45741cdd7c3a,
+        type: 3}
+      propertyPath: pAttack
+      value: 
+      objectReference: {fileID: 369030833}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36e4b3d4634e64f4989a45741cdd7c3a, type: 3}
 --- !u!4 &1200418002 stripped
@@ -2644,8 +2661,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Healthbar: {fileID: 1261395764}
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 1000
+  currentHealth: 1000
 --- !u!114 &1520598806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2712,6 +2729,19 @@ MonoBehaviour:
   strongAttacks:
   - 
   anim: {fileID: 0}
+--- !u!65 &1584029518
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584029515}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1, z: 1.5}
+  m_Center: {x: 0, y: 1, z: 0.8}
 --- !u!4 &1584029521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4505134156308728, guid: f0887cfe70370e745aa609c40c846950,
@@ -2850,6 +2880,7 @@ GameObject:
   - component: {fileID: 1689162444}
   - component: {fileID: 1689162443}
   - component: {fileID: 1689162442}
+  - component: {fileID: 1689162445}
   m_Layer: 5
   m_Name: VampyrHealthbar_BG
   m_TagString: Untagged
@@ -2928,6 +2959,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689162440}
   m_CullTransparentMesh: 0
+--- !u!114 &1689162445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689162440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39dc6159f3236b842b33f63ff1ee9e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 621430037}
 --- !u!1001 &1724982363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3204,6 +3248,11 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 1875199641}
+    - target: {fileID: 8064120426322586781, guid: 1e337205febf0bb4384ee08cc2e75c1d,
+        type: 3}
+      propertyPath: pAttack
+      value: 
+      objectReference: {fileID: 369030833}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e337205febf0bb4384ee08cc2e75c1d, type: 3}
 --- !u!4 &1875199639 stripped
@@ -3578,7 +3627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39dc6159f3236b842b33f63ff1ee9e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 621430037}
 --- !u!114 &1961571680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3799,7 +3848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39dc6159f3236b842b33f63ff1ee9e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 621430037}
 --- !u!114 &2047464560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3864,7 +3913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 440710, guid: 746041d87bbb1934aa613f48eff3b825, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.56
+      value: 64.08
       objectReference: {fileID: 0}
     - target: {fileID: 440710, guid: 746041d87bbb1934aa613f48eff3b825, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3872,7 +3921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 440710, guid: 746041d87bbb1934aa613f48eff3b825, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.36
+      value: 17.97
       objectReference: {fileID: 0}
     - target: {fileID: 440710, guid: 746041d87bbb1934aa613f48eff3b825, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3952,7 +4001,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 2060100214}
   trans: {fileID: 2060100212}
   rb: {fileID: 2060100211}
-  attackRange: 1.4
+  attackRange: 1.7
   aggroRadius: 10
   playerTrans: {fileID: 1584029521}
   moveSpeed: 8
@@ -3960,6 +4009,7 @@ MonoBehaviour:
   bigDamage: 10
   enemyType: 0
   attackDamage: 0
+  pAttack: {fileID: 369030833}
   enemyHealthbar: {fileID: 1189006465}
 --- !u!95 &2060100214 stripped
 Animator:

@@ -22,8 +22,9 @@ public class EnemyManager : MonoBehaviour
 	private int attackType;
 	private int respawnNum;
 	private bool isDead;
-	private PlayerAttack pAttack;
-	private int playerDamage;
+	public PlayerAttack pAttack;
+	private int playerLightDamage;
+    private int playerHeavyDamage;
 	private float turnSpeed;
 	public HealthbarController enemyHealthbar;
 
@@ -33,8 +34,9 @@ public class EnemyManager : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-		pAttack = GetComponent<PlayerAttack>();
-		//playerDamage = pAttack.damage;
+		
+		playerLightDamage = pAttack.lightDamage;
+        playerHeavyDamage = pAttack.heavyDamage;
         spawnPoint = transform.position;
 		isDead = false;
 		isAggro = false;
@@ -52,8 +54,43 @@ public class EnemyManager : MonoBehaviour
         if (isAggro==true){
 			followPlayer();
 
-			//Debug.Log("enemy is aggro");
-		}
+            //Debug.Log("enemy is aggro");
+
+            if (pAttack.lightHit)
+            {
+                Debug.Log("Enemy Takes damage");
+                enemyHealthbar.OnTakeDamage(playerLightDamage);
+
+
+                if (enemyHealthbar.currentHealth <= 0)
+                {
+                    enemyKilled();
+                }
+
+                pAttack.lightHit = false;
+            }
+
+
+            if (pAttack.heavyHit)
+            {
+                Debug.Log("Enemy Takes Heavy damage");
+                enemyHealthbar.OnTakeDamage(playerHeavyDamage);
+
+
+                if (enemyHealthbar.currentHealth <= 0)
+                {
+                    enemyKilled();
+                }
+
+                pAttack.heavyHit = false;
+            }
+
+
+
+        }
+
+        
+
     }
 
 	IEnumerator CheckForAggro(){
@@ -139,24 +176,49 @@ public class EnemyManager : MonoBehaviour
         }
 	}
 
-	void OnCollisionEnter(Collision col){
-		if (col.gameObject.tag == "Player"){
+	void OnTriggerEnter(Collider col){
+        if (col.gameObject.tag == "Sword")
+        {
 
-            Debug.Log("Hit by player!");
+            Debug.Log("Hit by player hitbox");
+            pAttack.canHit = true;
 
-			//set animator trigger for getting hit
-			enemyAnim.SetTrigger ("enemyHit");
+            
+
+
+
+        }
+
+
+
 			
-			enemyHealthbar.OnTakeDamage(pAttack.damage);
+            
+            
+            
+            
+            //set animator trigger for getting hit
+			//enemyAnim.SetTrigger ("enemyHit");
+			
+			//enemyHealthbar.OnTakeDamage(pAttack.damage);
 
 			//if enemy health drops to zero they're dead
-			if (enemyHealthbar.currentHealth <= 0){
-				enemyKilled();
-			}
-		}
+			
+		
 	}
 
-	void enemyKilled(){
+     void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "Sword")
+        {
+            Debug.Log("No longer in player hitbox");
+            pAttack.canHit = false;
+        }
+
+    }
+
+
+
+    void enemyKilled(){
 		isDead = true;
 		enemyAnim.SetBool("enemyDead", true);
 	}
