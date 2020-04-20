@@ -9,21 +9,30 @@ public class PlayerHealth : MonoBehaviour
 	private Vector3 respawnPoint;
 	private bool isDead;
 	private EnemyManager enem;
-	private int enemyDamage;
 	public HealthbarController healthbar;
 
     // Start is called before the first frame update
     void Start()
     {
         enem = GetComponent<EnemyManager>();
-		//enemyDamage = enem.attackDamage;
 		isDead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(enem.isAttacking == true)
+        {
+            Debug.Log("Player is being attacked");
+            healthbar.OnTakeDamage(enem.attackDamage);
+
+            if(healthbar.currentHealth <= 0)
+            {
+                playerDeath();
+            }
+
+            enem.isAttacking = false;
+        }
     }
 
 	void OnCollisionEnter(Collision col){

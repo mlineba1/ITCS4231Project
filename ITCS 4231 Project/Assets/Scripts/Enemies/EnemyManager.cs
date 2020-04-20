@@ -17,7 +17,7 @@ public class EnemyManager : MonoBehaviour
 	public int attackDamage;
 	private bool isAggro;
 	private bool isMoving;
-	private bool isAttacking;
+	public bool isAttacking;
 	private Vector3 spawnPoint;
 	private int attackType;
 	private int respawnNum;
@@ -129,26 +129,23 @@ public class EnemyManager : MonoBehaviour
 				attackType = Random.Range(0, 4);
 
 				if (attackType < 3){
-					Debug.Log("Small attack");
-					//set the animator to attacking 
-					isAttacking = true;
-					enemyAnim.SetBool("enemyAttacking", true);
-					attackDamage = smallDamage;
-				}
+                    Debug.Log("Small attack");
+                    //set the animator to attacking 
+                    enemyAnim.SetBool("enemyAttacking", true);
+                    EnemySmallAttackEvent();
+                }
 				else {
 					Debug.Log("Big attack");
 					//set the animator to attacking 
-					isAttacking = true;
 					enemyAnim.SetBool("enemyBigAttacking", true);
-					attackDamage = bigDamage;
+                    EnemyBigAttackEvent();
 				}
 			}
 			//basic enemy attack
 			else{
 				//set the animator to attacking 
-				isAttacking = true;
 				enemyAnim.SetBool("enemyAttacking", true);
-				attackDamage = smallDamage;
+                EnemySmallAttackEvent();
 			}
 			
 		}
@@ -176,7 +173,19 @@ public class EnemyManager : MonoBehaviour
         }
 	}
 
-	void OnTriggerEnter(Collider col){
+    public void EnemySmallAttackEvent()
+    {
+        attackDamage = smallDamage;
+        isAttacking = true;
+    }
+
+    public void EnemyBigAttackEvent()
+    {
+        attackDamage = bigDamage;
+        isAttacking = true;
+    }
+
+    void OnTriggerEnter(Collider col){
         if (col.gameObject.tag == "Sword")
         {
 
