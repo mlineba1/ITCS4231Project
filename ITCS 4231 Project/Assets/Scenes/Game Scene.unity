@@ -584,6 +584,11 @@ PrefabInstance:
       propertyPath: pAttack
       value: 
       objectReference: {fileID: 369030833}
+    - target: {fileID: -6058860386748868775, guid: 2a972a4ce5036c2459c4bea45ef9921d,
+        type: 3}
+      propertyPath: playerHealthbar
+      value: 
+      objectReference: {fileID: 1520598805}
     - target: {fileID: 124686, guid: 2a972a4ce5036c2459c4bea45ef9921d, type: 3}
       propertyPath: m_Name
       value: cyclops monster
@@ -1190,6 +1195,11 @@ PrefabInstance:
       propertyPath: pAttack
       value: 
       objectReference: {fileID: 369030833}
+    - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
+        type: 3}
+      propertyPath: playerHealthbar
+      value: 
+      objectReference: {fileID: 1520598805}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 662c0b6b9e9922c45b57c16a9981f996, type: 3}
 --- !u!4 &139188215 stripped
@@ -2466,7 +2476,7 @@ PrefabInstance:
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: aggroRadius
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
@@ -2487,12 +2497,12 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyAnim
       value: 
-      objectReference: {fileID: 1200418003}
+      objectReference: {fileID: 461352716}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: trans
       value: 
-      objectReference: {fileID: 1200418002}
+      objectReference: {fileID: 461352709}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: playerTrans
@@ -2513,6 +2523,11 @@ PrefabInstance:
       propertyPath: pAttack
       value: 
       objectReference: {fileID: 369030833}
+    - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
+        type: 3}
+      propertyPath: playerHealthbar
+      value: 
+      objectReference: {fileID: 1520598805}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 662c0b6b9e9922c45b57c16a9981f996, type: 3}
 --- !u!4 &461352709 stripped
@@ -2543,6 +2558,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!95 &461352716 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9545580, guid: 662c0b6b9e9922c45b57c16a9981f996,
+    type: 3}
+  m_PrefabInstance: {fileID: 461352708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &464390881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6395,6 +6416,11 @@ PrefabInstance:
       propertyPath: pAttack
       value: 
       objectReference: {fileID: 369030833}
+    - target: {fileID: 1497430804101483155, guid: 36e4b3d4634e64f4989a45741cdd7c3a,
+        type: 3}
+      propertyPath: playerHealthbar
+      value: 
+      objectReference: {fileID: 1520598805}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36e4b3d4634e64f4989a45741cdd7c3a, type: 3}
 --- !u!4 &1200418002 stripped
@@ -8700,12 +8726,12 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyAnim
       value: 
-      objectReference: {fileID: 1200418003}
+      objectReference: {fileID: 1505488412}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: trans
       value: 
-      objectReference: {fileID: 1200418002}
+      objectReference: {fileID: 1505488405}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: playerTrans
@@ -8726,6 +8752,11 @@ PrefabInstance:
       propertyPath: pAttack
       value: 
       objectReference: {fileID: 369030833}
+    - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
+        type: 3}
+      propertyPath: playerHealthbar
+      value: 
+      objectReference: {fileID: 1520598805}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 662c0b6b9e9922c45b57c16a9981f996, type: 3}
 --- !u!4 &1505488405 stripped
@@ -8756,6 +8787,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!95 &1505488412 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9545580, guid: 662c0b6b9e9922c45b57c16a9981f996,
+    type: 3}
+  m_PrefabInstance: {fileID: 1505488404}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1515885751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9143,12 +9180,12 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyAnim
       value: 
-      objectReference: {fileID: 1200418003}
+      objectReference: {fileID: 1532846843}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: trans
       value: 
-      objectReference: {fileID: 1200418002}
+      objectReference: {fileID: 1532846836}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: playerTrans
@@ -9169,6 +9206,11 @@ PrefabInstance:
       propertyPath: pAttack
       value: 
       objectReference: {fileID: 369030833}
+    - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
+        type: 3}
+      propertyPath: playerHealthbar
+      value: 
+      objectReference: {fileID: 1520598805}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 662c0b6b9e9922c45b57c16a9981f996, type: 3}
 --- !u!4 &1532846836 stripped
@@ -9199,6 +9241,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!95 &1532846843 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9545580, guid: 662c0b6b9e9922c45b57c16a9981f996,
+    type: 3}
+  m_PrefabInstance: {fileID: 1532846835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1540772510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9997,6 +10045,11 @@ PrefabInstance:
       propertyPath: pAttack
       value: 
       objectReference: {fileID: 369030833}
+    - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
+        type: 3}
+      propertyPath: playerHealthbar
+      value: 
+      objectReference: {fileID: 1520598805}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 662c0b6b9e9922c45b57c16a9981f996, type: 3}
 --- !u!4 &1647539167 stripped
@@ -11181,6 +11234,11 @@ PrefabInstance:
       propertyPath: pAttack
       value: 
       objectReference: {fileID: 369030833}
+    - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
+        type: 3}
+      propertyPath: playerHealthbar
+      value: 
+      objectReference: {fileID: 1520598805}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 662c0b6b9e9922c45b57c16a9981f996, type: 3}
 --- !u!4 &1931927310 stripped
@@ -11995,6 +12053,7 @@ MonoBehaviour:
   isAttacking: 0
   pAttack: {fileID: 369030833}
   enemyHealthbar: {fileID: 1189006465}
+  playerHealthbar: {fileID: 1520598805}
 --- !u!95 &2060100214 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9532218, guid: 746041d87bbb1934aa613f48eff3b825,
@@ -12406,12 +12465,12 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyAnim
       value: 
-      objectReference: {fileID: 1200418003}
+      objectReference: {fileID: 2107286291}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: trans
       value: 
-      objectReference: {fileID: 1200418002}
+      objectReference: {fileID: 2107286284}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: playerTrans
@@ -12432,6 +12491,11 @@ PrefabInstance:
       propertyPath: pAttack
       value: 
       objectReference: {fileID: 369030833}
+    - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
+        type: 3}
+      propertyPath: playerHealthbar
+      value: 
+      objectReference: {fileID: 1520598805}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 662c0b6b9e9922c45b57c16a9981f996, type: 3}
 --- !u!4 &2107286284 stripped
@@ -12462,6 +12526,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!95 &2107286291 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9545580, guid: 662c0b6b9e9922c45b57c16a9981f996,
+    type: 3}
+  m_PrefabInstance: {fileID: 2107286283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2129204159
 PrefabInstance:
   m_ObjectHideFlags: 0

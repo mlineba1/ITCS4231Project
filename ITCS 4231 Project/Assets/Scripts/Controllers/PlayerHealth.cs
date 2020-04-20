@@ -21,7 +21,10 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(enem.isAttacking == true)
+       
+        
+        
+        /* if(enem.isAttacking == true)
         {
             Debug.Log("Player is being attacked");
             healthbar.OnTakeDamage(enem.attackDamage);
@@ -32,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
             }
 
             enem.isAttacking = false;
-        }
+        }*/
     }
 
 	void OnCollisionEnter(Collision col){

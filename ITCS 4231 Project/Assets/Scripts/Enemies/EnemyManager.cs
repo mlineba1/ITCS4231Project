@@ -22,11 +22,13 @@ public class EnemyManager : MonoBehaviour
 	private int attackType;
 	private int respawnNum;
 	private bool isDead;
+    private bool attackCD;
 	public PlayerAttack pAttack;
 	private int playerLightDamage;
     private int playerHeavyDamage;
 	private float turnSpeed;
 	public HealthbarController enemyHealthbar;
+    public HealthbarController playerHealthbar;
 
 	//private static CharacterManager character; (connect character script to this script !!!)
 
@@ -42,7 +44,7 @@ public class EnemyManager : MonoBehaviour
 		isAggro = false;
 		isMoving = false;
 		turnSpeed = 5f;
-        
+        attackCD = true;
 		respawnNum = Random.Range(0, 4);
     }
 
@@ -128,25 +130,50 @@ public class EnemyManager : MonoBehaviour
 				//1 in 4 chance of a big attack from an enemy
 				attackType = Random.Range(0, 4);
 
-				if (attackType < 3){
+                if (attackType < 3)
+                {
                     Debug.Log("Small attack");
                     //set the animator to attacking 
-                    enemyAnim.SetBool("enemyAttacking", true);
-                    EnemySmallAttackEvent();
+
+
+                    if (attackCD)
+                    {
+                        enemyAnim.SetBool("enemyAttacking", true);
+                        playerHealthbar.OnTakeDamage(smallDamage);
+                        EnemySmallAttackEvent();
+                        attackCD = false;
+                        Invoke("attackCooldown", 2);
+                    }
                 }
 				else {
 					Debug.Log("Big attack");
 					//set the animator to attacking 
-					enemyAnim.SetBool("enemyBigAttacking", true);
-                    EnemyBigAttackEvent();
-				}
+					
+                    
+                    if (attackCD)
+                    {
+                        enemyAnim.SetBool("enemyBigAttacking", true);
+                        playerHealthbar.OnTakeDamage(bigDamage);
+                        EnemyBigAttackEvent();
+                        attackCD = false;
+                        Invoke("attackCooldown", 2);
+                    }
+
+
+                }
 			}
 			//basic enemy attack
 			else{
-				//set the animator to attacking 
-				enemyAnim.SetBool("enemyAttacking", true);
-                EnemySmallAttackEvent();
-			}
+                //set the animator to attacking 
+                if (attackCD)
+                {
+                    enemyAnim.SetBool("enemyAttacking", true);
+                    playerHealthbar.OnTakeDamage(smallDamage);
+                    EnemySmallAttackEvent();
+                    attackCD = false;
+                    Invoke("attackCooldown", 2);
+                }
+            }
 			
 		}
 		else{
@@ -247,5 +274,17 @@ public class EnemyManager : MonoBehaviour
 
 		Quaternion targetRotation = Quaternion.LookRotation (towardsPlayer);
 		trans.rotation = Quaternion.Lerp (trans.rotation, targetRotation, turnSpeed * Time.deltaTime);
+
+
+
+
+
 	}
+
+    public void attackCooldown()
+    {
+        attackCD = true;
+    }
+
+
 }
