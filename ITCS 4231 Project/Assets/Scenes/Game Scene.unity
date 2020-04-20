@@ -3598,7 +3598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 440710, guid: 746041d87bbb1934aa613f48eff3b825, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.76
+      value: 13.62
       objectReference: {fileID: 0}
     - target: {fileID: 440710, guid: 746041d87bbb1934aa613f48eff3b825, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3686,6 +3686,7 @@ MonoBehaviour:
   bigDamage: 10
   enemyType: 0
   attackDamage: 0
+  isAttacking: 0
   pAttack: {fileID: 369030833}
   enemyHealthbar: {fileID: 1189006465}
 --- !u!95 &2060100214 stripped
