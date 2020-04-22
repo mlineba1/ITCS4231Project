@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
 	private bool isDead;
 	private EnemyManager enem;
 	public HealthbarController healthbar;
+	public bool potionRestore;
 
     // Start is called before the first frame update
     void Start()
@@ -62,7 +63,8 @@ public class PlayerHealth : MonoBehaviour
 			//Heal player
 			healthbar.currentHealth = healthbar.maxHealth;
 
-			//restore potions (!!!)
+			//restore potions
+			potionRestore = true;
 		}
 	}
 

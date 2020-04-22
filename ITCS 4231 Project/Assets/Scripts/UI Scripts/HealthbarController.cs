@@ -26,4 +26,10 @@ public class HealthbarController : MonoBehaviour
 
 		
 	}
+
+	public void restoreHealth(int amountRestored){
+		if(currentHealth < maxHealth){
+			currentHealth = currentHealth + amountRestored;
+		}
+	}
 }
