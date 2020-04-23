@@ -1,24 +1,25 @@
 # ITCS4231Project
 
-Project Group 2
+## Project Group 2
 
-Milo Boger:
+###### Milo Boger:
 - Programmed enemies
 - Programmed health system
 - Programmed checkpoint system
 - Created UI for health
 
-Marc Lineback:
+###### Marc Lineback:
 - Programmed player attacks, movement, and animation
 - Handled a lot of debugging 
 - Programmed damage for enemy and player attacks.
 
-Keith Hassel:
+###### Keith Hassel:
 - Created scenery
 - Designed level
 - Enemy and checkpoint placement
 
-Controls:
+
+## Game Controls:
 - Arrow keys for movement
 - Change view and direction through mouse movement
 - Right and left click to attack
