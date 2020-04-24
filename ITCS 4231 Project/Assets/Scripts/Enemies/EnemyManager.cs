@@ -102,7 +102,7 @@ public class EnemyManager : MonoBehaviour
 			// Check distance to aggro (!!!)
 			float d = Vector3.Distance (trans.position, playerTrans.position); 
 
-			if (d < aggroRadius) {
+			if (d < aggroRadius && isDead == false) {
 				isAggro = true;
 			}
 		}

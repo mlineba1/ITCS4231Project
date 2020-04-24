@@ -22,21 +22,10 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        
-        
-        /* if(enem.isAttacking == true)
-        {
-            Debug.Log("Player is being attacked");
-            healthbar.OnTakeDamage(enem.attackDamage);
-
-            if(healthbar.currentHealth <= 0)
-            {
-                playerDeath();
-            }
-
-            enem.isAttacking = false;
-        }*/
+       //if player health drops to zero they're dead
+		if (healthbar.currentHealth <= 0){
+			playerDeath();
+		}
     }
 
 	void OnCollisionEnter(Collision col){
@@ -51,10 +40,7 @@ public class PlayerHealth : MonoBehaviour
 			Debug.Log("enemy's damage " + enem.attackDamage);
 			healthbar.OnTakeDamage(enem.attackDamage);
 
-			//if enemy health drops to zero they're dead
-			if (healthbar.currentHealth <= 0){
-				playerDeath();
-			}
+			
 		}
 		if (col.gameObject.tag == "Checkpoint"){
 			//save a Vector3 value as a place to respawn at
