@@ -518,12 +518,12 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyAnim
       value: 
-      objectReference: {fileID: 1200418003}
+      objectReference: {fileID: 49603103}
     - target: {fileID: -6058860386748868775, guid: 2a972a4ce5036c2459c4bea45ef9921d,
         type: 3}
       propertyPath: trans
       value: 
-      objectReference: {fileID: 1200418002}
+      objectReference: {fileID: 49603101}
     - target: {fileID: -6058860386748868775, guid: 2a972a4ce5036c2459c4bea45ef9921d,
         type: 3}
       propertyPath: attackRange
@@ -675,6 +675,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!95 &49603103 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9516324, guid: 2a972a4ce5036c2459c4bea45ef9921d,
+    type: 3}
+  m_PrefabInstance: {fileID: 49603099}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &63501568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1169,12 +1175,12 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyAnim
       value: 
-      objectReference: {fileID: 1200418003}
+      objectReference: {fileID: 139188218}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: trans
       value: 
-      objectReference: {fileID: 1200418002}
+      objectReference: {fileID: 139188215}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: playerTrans
@@ -1230,6 +1236,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!95 &139188218 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9545580, guid: 662c0b6b9e9922c45b57c16a9981f996,
+    type: 3}
+  m_PrefabInstance: {fileID: 139188214}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &158901315
 GameObject:
   m_ObjectHideFlags: 0
@@ -3994,6 +4006,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8707054453513582768, guid: fb09873443ab1854d8892a2693f70148,
+        type: 3}
+      propertyPath: checkpoint
+      value: 
+      objectReference: {fileID: 644783063}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb09873443ab1854d8892a2693f70148, type: 3}
 --- !u!4 &644783062 stripped
@@ -6533,12 +6550,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1200418001}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1200418003 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9553852, guid: 36e4b3d4634e64f4989a45741cdd7c3a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1200418001}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1200418004 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 173188, guid: 36e4b3d4634e64f4989a45741cdd7c3a,
@@ -8014,6 +8025,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8707054453513582768, guid: fb09873443ab1854d8892a2693f70148,
+        type: 3}
+      propertyPath: checkpoint
+      value: 
+      objectReference: {fileID: 1428202449}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb09873443ab1854d8892a2693f70148, type: 3}
 --- !u!4 &1428202448 stripped
@@ -10124,12 +10140,12 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyAnim
       value: 
-      objectReference: {fileID: 1200418003}
+      objectReference: {fileID: 1647539170}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: trans
       value: 
-      objectReference: {fileID: 1200418002}
+      objectReference: {fileID: 1647539167}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: playerTrans
@@ -10185,6 +10201,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!95 &1647539170 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9545580, guid: 662c0b6b9e9922c45b57c16a9981f996,
+    type: 3}
+  m_PrefabInstance: {fileID: 1647539166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1665835946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10364,6 +10386,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8707054453513582768, guid: fb09873443ab1854d8892a2693f70148,
+        type: 3}
+      propertyPath: checkpoint
+      value: 
+      objectReference: {fileID: 1432995198}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb09873443ab1854d8892a2693f70148, type: 3}
 --- !u!4 &1686601099 stripped
@@ -11313,12 +11340,12 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyAnim
       value: 
-      objectReference: {fileID: 1200418003}
+      objectReference: {fileID: 1931927313}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: trans
       value: 
-      objectReference: {fileID: 1200418002}
+      objectReference: {fileID: 1931927310}
     - target: {fileID: 5947403019218812159, guid: 662c0b6b9e9922c45b57c16a9981f996,
         type: 3}
       propertyPath: playerTrans
@@ -11374,6 +11401,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!95 &1931927313 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9545580, guid: 662c0b6b9e9922c45b57c16a9981f996,
+    type: 3}
+  m_PrefabInstance: {fileID: 1931927309}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1944094221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12823,6 +12856,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8707054453513582768, guid: fb09873443ab1854d8892a2693f70148,
+        type: 3}
+      propertyPath: checkpoint
+      value: 
+      objectReference: {fileID: 2143197229}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb09873443ab1854d8892a2693f70148, type: 3}
 --- !u!4 &2143197228 stripped
