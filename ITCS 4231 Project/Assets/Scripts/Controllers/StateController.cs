@@ -116,26 +116,7 @@ namespace SA
         }
 
 
-        //*****Unfinished***** 
-        public bool onGround()
-        {
-            bool r = false;
-
-            Vector3 origin = transform.position + Vector3.up * toGround;
-            Vector3 dir = -Vector3.up;
-            float dis = toGround - 0.3f;
-            RaycastHit hit;
-            if (Physics.Raycast(origin, dir, out hit, dis, ignoreLayers)){
-                r = true;
-                Vector3 targetPosition = hit.point;
-                transform.position = targetPosition;
-            }
-
-            return r;
-           
-
-
-        }
+        
 
     }
 }

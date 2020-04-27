@@ -27,7 +27,7 @@ public class PotionScript : MonoBehaviour
 			pText.text = "x" + potionCount;
 		}
 
-		if (Input.GetKey(KeyCode.F)){
+		if (Input.GetKeyDown(KeyCode.F)){
 			usePotion();
 		}
 
@@ -40,11 +40,18 @@ public class PotionScript : MonoBehaviour
 
 	void usePotion(){
 		
-		playerHealthbar.restoreHealth(10);
-		potionCount = potionCount - 1;
+		
+        if (potionCount > 0)
+        {
+            potionCount = potionCount - 1;
+            playerHealthbar.restoreHealth(25);
+        } else
+        {
+
+        }
 	}
 
-	void refillPotions(int refillAmount){
+	public void refillPotions(int refillAmount){
 		potionCount = potionCount + refillAmount;
 	}
 }

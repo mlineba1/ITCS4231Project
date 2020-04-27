@@ -19,12 +19,12 @@ public class PlayerAttack : MonoBehaviour
 
         if (canHit)
         {
-            Debug.Log("Player Light Attack hit enemy");
+          //  Debug.Log("Player Light Attack hit enemy");
             lightHit = true;
 
         } else
         {
-            Debug.Log("No enemy in front of player");
+            //Debug.Log("No enemy in front of player");
         }
         
 
@@ -35,12 +35,12 @@ public class PlayerAttack : MonoBehaviour
     {
         if (canHit)
         {
-            Debug.Log("Player Strong Attack hit enemy");
+           // Debug.Log("Player Strong Attack hit enemy");
             heavyHit = true;
         }
         else
         {
-            Debug.Log("No enemy in front of player");
+           // Debug.Log("No enemy in front of player");
         }
 
     }

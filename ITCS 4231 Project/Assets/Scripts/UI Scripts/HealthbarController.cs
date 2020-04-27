@@ -27,9 +27,16 @@ public class HealthbarController : MonoBehaviour
 		
 	}
 
-	public void restoreHealth(int amountRestored){
+	public void restoreHealth(float amountRestored){
 		if(currentHealth < maxHealth){
+            Debug.Log("Healing Damage, current health: "+ currentHealth);
 			currentHealth = currentHealth + amountRestored;
-		}
+            Healthbar.fillAmount = currentHealth / maxHealth;
+        } else
+        {
+            Debug.Log("Healing no Damage! current health: "+ currentHealth);
+            currentHealth = maxHealth;
+            Healthbar.fillAmount = currentHealth / maxHealth;
+        }
 	}
 }

@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
 			respawnPoint = col.transform.position;
 
 			//Heal player
-			healthbar.currentHealth = healthbar.maxHealth;
+			healthbar.restoreHealth(healthbar.maxHealth-healthbar.currentHealth);
 
 			//restore potions
 			potionRestore = true;

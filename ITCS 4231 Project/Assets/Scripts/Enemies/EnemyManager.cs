@@ -53,7 +53,7 @@ public class EnemyManager : MonoBehaviour
     {
 		StartCoroutine (CheckForAggro ());
 
-        if (isAggro==true){
+        if (isAggro==true && !isDead){
 			followPlayer();
 
             //Debug.Log("enemy is aggro");
@@ -126,13 +126,13 @@ public class EnemyManager : MonoBehaviour
 
 			//bigger enemy attack
 			if (enemyType == 2){
-				Debug.Log("Big enemy");
+			//	Debug.Log("Big enemy");
 				//1 in 4 chance of a big attack from an enemy
 				attackType = Random.Range(0, 4);
 
                 if (attackType < 3)
                 {
-                    Debug.Log("Small attack");
+                    //Debug.Log("Small attack");
                     //set the animator to attacking 
 
 
@@ -146,7 +146,7 @@ public class EnemyManager : MonoBehaviour
                     }
                 }
 				else {
-					Debug.Log("Big attack");
+					//Debug.Log("Big attack");
 					//set the animator to attacking 
 					
                     

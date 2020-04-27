@@ -6,6 +6,7 @@ public class CheckpointManager : MonoBehaviour
 {
     public GameObject checkpoint;
 	public static int respawnSignal;
+    public PotionScript pot;
 
 	void Start (){
 		respawnSignal = Random.Range(0, 4);
@@ -13,6 +14,7 @@ public class CheckpointManager : MonoBehaviour
 
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Player"){
+            pot.refillPotions(2);
 			Destroy(checkpoint);
 		}
 	}
