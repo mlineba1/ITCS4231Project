@@ -114,11 +114,12 @@ public class EnemyManager : MonoBehaviour
 
         Vector3 towardsPlayer = playerTrans.position - trans.position;
 		Vector3 towardsSpawnPoint = trans.position - spawnPoint;
+        //face the Player
+        facePlayer();
 
-		// Are we close enough to attack -> Attack state
-		if (towardsPlayer.magnitude < attackRange) {
-			//face the Player
-			facePlayer();
+        // Are we close enough to attack -> Attack state
+        if (towardsPlayer.magnitude < attackRange) {
+			
 
 			//set animator to not move
 			isMoving = false;

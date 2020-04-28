@@ -43,8 +43,10 @@ public class PlayerHealth : MonoBehaviour
 			
 		}
 		if (col.gameObject.tag == "Checkpoint"){
-			//save a Vector3 value as a place to respawn at
-			respawnPoint = col.transform.position;
+            //save a Vector3 value as a place to respawn at
+            respawnPoint = new Vector3(84, 1, 3);
+            string temp = respawnPoint.ToString();
+            Debug.Log("Respawn point is: " + temp );
 
 			//Heal player
 			healthbar.restoreHealth(healthbar.maxHealth-healthbar.currentHealth);
@@ -66,8 +68,10 @@ public class PlayerHealth : MonoBehaviour
 
 	void respawn(){
 		player.transform.position = respawnPoint;
+        string temp2 = player.transform.ToString();
+        Debug.Log("Respawned at: " + temp2);
 		isDead = false;
-		healthbar.currentHealth = healthbar.maxHealth;
-		anim.SetBool("isDead", false);
+        healthbar.restoreHealth(healthbar.maxHealth);
+        anim.SetBool("isDead", false);
 	}
 }
